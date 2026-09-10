@@ -3,9 +3,7 @@
 
 #include "grupo.h"
 #include "requisitos.h"
-
-#define MAX_GRUPOS_POR_CURSO 10
-#define MAX_NOMBRE_LEN 100
+#include "constantes.h"
 
 typedef struct {
     char codigo[MAX_CODIGO_LEN];
@@ -17,5 +15,16 @@ typedef struct {
     Grupo grupos[MAX_GRUPOS_POR_CURSO];
     int cantidadGrupos;
 } Curso;
+
+/* Configura un curso vacío. */
+void inicializarCurso(Curso *curso);
+
+/* Parsea una línea del CSV en un Curso. Devuelve: 0 ok, o un código
+ * negativo indicando el tipo de error. */
+int leerCurso(const char *linea, Curso *curso);
+
+/* Carga todos los cursos desde data/cursos.csv. Devuelve: la cantidad de
+ * cursos cargados, o -1 si no se pudo abrir el archivo. */
+int cargarCursos(Curso *cursos, int maxCursos);
 
 #endif
