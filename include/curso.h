@@ -14,6 +14,7 @@ typedef struct {
     Requisitos correquisitos;
     Grupo grupos[MAX_GRUPOS_POR_CURSO];
     int cantidadGrupos;
+    int puedeMatricular; /* 1 si el estudiante puede matricularlo */
 } Curso;
 
 /* Configura un curso vacío. */

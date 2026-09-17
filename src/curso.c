@@ -1,24 +1,6 @@
-/*
- * curso.c
- *
- * Lectura y carga de cursos desde data/cursos.csv.
- *
- * Formato real del archivo (campos separados por ';'):
- *   codigo;curso;grupo;tipo;profesor;horario;creditos;horas;sede;
- *   requisitos;correquisitos
- *
- * El horario puede venir en dos formatos:
- *   "MIE[07:30-09:20], VIE[07:30-09:20]"   (días mayúsculas)
- *   "Mié 18:00-20:50 / Vie 18:00-19:50"    (días con tilde, guion largo)
- *
- * La jerarquía de memoria queda:
- *   Curso -> requisitos/correquisitos -> grupos[] -> horarios[]
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 #include "curso.h"
 
 #define MAX_CURSOS 70
@@ -134,6 +116,7 @@ void inicializarCurso(Curso *curso) {
     inicializarRequisitos(&curso->requisitos);
     inicializarRequisitos(&curso->correquisitos);
     curso->cantidadGrupos = 0;
+    curso->puedeMatricular = 0;
 }
 
 /*
