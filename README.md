@@ -4,14 +4,122 @@ Proyecto del curso Paradigmas de Programación (CE1106). Este módulo carga el
 catálogo de cursos y el historial del estudiante, detecta choques de horario,
 valida requisitos y correquisitos, y exporta el catálogo a un archivo de salida.
 
-## Arquitectura del proyecto
+## Persona 1 — Gestión y preparación de datos (Sebastián Azofeifa Villalobos)
 
-(pendiente)
+## Descripción
+
+Esta parte del proyecto se encarga de la definición, carga, organización y
+validación de la información utilizada por el sistema. Se implementan las
+estructuras necesarias para representar los cursos, grupos, horarios,
+requisitos, correquisitos e historial académico.
+
+## Responsabilidades
+
+- Definir las estructuras de datos utilizadas por el sistema.
+- Cargar el catálogo de cursos desde el archivo de entrada.
+- Organizar los grupos correspondientes a cada curso.
+- Procesar y almacenar los horarios de cada grupo.
+- Cargar el historial académico del estudiante.
+- Manejar los requisitos y correquisitos de los cursos.
+- Validar y limpiar los datos de entrada.
+- Detectar registros duplicados o inconsistentes.
+- Verificar si un curso se encuentra aprobado en el historial.
 
 ## Estructuras de datos
 
-(pendiente)
+Las principales estructuras utilizadas son:
 
+### Curso
+
+Representa la información de un curso, incluyendo:
+
+- Código.
+- Nombre.
+- Créditos.
+- Horas.
+- Requisitos.
+- Correquisitos.
+- Grupos disponibles.
+
+### Grupo
+
+Representa una sección de un curso e incluye:
+
+- Número de grupo.
+- Tipo de grupo.
+- Profesor.
+- Horarios.
+
+### Horario
+
+Representa el horario de un grupo mediante:
+
+- Día.
+- Hora de inicio.
+- Hora de finalización.
+
+### Requisitos
+
+Almacena los códigos de los cursos que son requisitos o correquisitos.
+
+### Historial
+
+Almacena los cursos aprobados por el estudiante.
+
+## Archivos
+
+La implementación de esta parte se divide en los siguientes archivos:
+
+### `curso.h` / `curso.c`
+
+Contienen la estructura `Curso` y las funciones relacionadas con la
+carga, búsqueda y validación del catálogo de cursos.
+
+### `grupo.h` / `grupo.c`
+
+Contienen la estructura `Grupo` y las funciones para manejar los grupos
+y sus horarios.
+
+### `horario.h` / `horario.c`
+
+Contienen la estructura `Horario` y las funciones encargadas de interpretar
+y validar los horarios provenientes del archivo de datos.
+
+### `requisitos.h` / `requisitos.c`
+
+Manejan los requisitos y correquisitos de los cursos.
+
+### `historial.h` / `historial.c`
+
+Contienen la estructura `Historial` y las funciones para cargar y consultar
+los cursos aprobados por el estudiante.
+
+## Flujo de procesamiento
+
+Los datos siguen aproximadamente el siguiente flujo:
+
+1. Se lee el archivo del catálogo de cursos.
+2. Se procesa cada registro.
+3. Se validan los datos obtenidos.
+4. Se crean los cursos y sus respectivos grupos.
+5. Se procesan y almacenan los horarios.
+6. Se almacenan los requisitos y correquisitos.
+7. Se carga el historial académico.
+8. El historial puede ser consultado para determinar si un curso fue aprobado.
+
+## Validación y limpieza de datos
+
+Durante la carga se realizan verificaciones para evitar problemas en la
+información utilizada por el programa, como:
+
+- Campos incompletos.
+- Registros duplicados.
+- Cursos repetidos.
+- Grupos repetidos.
+- Horarios con formato incorrecto.
+- Límites máximos de cursos, grupos y horarios.
+- Inconsistencias entre registros de un mismo curso.
+  
 ## Persona 2: Detección de Choques de Horario (Ian Alejandro Bonilla Mena)
 
 ### 1. Algoritmo de detección de choques
