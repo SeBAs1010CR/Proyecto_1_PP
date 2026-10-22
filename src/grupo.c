@@ -1,8 +1,17 @@
 /*
  * grupo.c
  *
+ * Módulo: Grupo
+ * Autoría: Persona 1 - Sebastián Azofeifa
+ * 
  * Funciones para crear, completar y validar un Grupo.
  * Un grupo se compone de: número, tipo, profesor y uno o varios Horario.
+ * 
+ * Validaciones principales:
+ * - Número de grupo > 0 y dentro del límite.
+ * - Tipo de grupo dentro de los tipos reales del CSV.
+ * - Profesor válido (no vacío, largo correcto, sin solo espacios).
+ * - Al menos un horario, sin duplicados ni exceso.
  */
 
 #include <stdio.h>

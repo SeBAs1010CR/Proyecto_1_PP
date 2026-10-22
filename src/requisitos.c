@@ -1,8 +1,11 @@
 /*
  * requisitos.c
  *
+ * Módulo: Requisitos y Correquisitos
  * Funciones para manejar listas de códigos (requisitos y correquisitos).
  * La misma estructura Requisitos se usa para ambos casos.
+ * 
+ * Se encarga de validar, agregar y comparar listas de códigos de cursos.
  */
 
 #include <stdio.h>

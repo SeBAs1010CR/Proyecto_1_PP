@@ -1,4 +1,13 @@
+# Archivos que Git debe ignorar (no versionar)
+
+# Objetos compilados de C
 *.o
+
+# Ejecutables de Windows
 *.exe
+
+# Archivos temporales de Microsoft Office (bloqueos)
 ~$*
+
+# Configuración local del editor Visual Studio Code
 .vscode/

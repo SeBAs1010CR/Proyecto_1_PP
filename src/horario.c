@@ -18,6 +18,14 @@
 
 #include "horario.h"
 
+/*
+ * esDigito
+ * 
+ * Verifica si un carácter es un dígito numérico (0-9).
+ * 
+ * Recibe: carácter c.
+ * Devuelve: 1 si es dígito, 0 si no.
+ */
 static int esDigito(char c) { return c >= '0' && c <= '9'; }
 
 /*

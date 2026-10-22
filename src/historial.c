@@ -1,8 +1,14 @@
 /*
  * historial.c
  *
+ * Módulo: Historial académico
+ * Autoría: Persona 1 - Sebastián Azofeifa
+ * 
  * Funciones para cargar el historial de cursos aprobados desde
  * data/historial.csv (un código de curso por línea) y para consultarlo.
+ * 
+ * Durante la carga se ignoran líneas vacías, códigos duplicados y códigos
+ * demasiado largos, reportándolos como advertencias.
  */
 
 #include <stdio.h>
@@ -13,7 +19,14 @@
 #define RUTA_HISTORIAL "data/historial.csv"
 #define TAM_LINEA 256
 
-/* Quita espacios y saltos de línea al inicio y al final de una cadena. */
+/*
+ * recortar
+ * 
+ * Quita espacios, tabulaciones, CR y LF al inicio y final de una cadena.
+ * 
+ * Recibe: cadena a modificar in-place.
+ * Devuelve: nada.
+ */
 static void recortar(char *s) {
     if (s == NULL) return;
     char *inicio = s;

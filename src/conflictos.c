@@ -1,76 +1,102 @@
-// Incluye la librería estándar de C para manejar cadenas de texto (strcmp)
+/*
+ * conflictos.c
+ * 
+ * Módulo: Detección de choques de horario
+ * Autoría: Persona 2 - Ian Alejandro Bonilla Mena
+ * 
+ * Propósito: Implementa la detección de superposición entre horarios, grupos y cursos.
+ * 
+ * Nota importante sobre el caso límite: cuando un horario termina exactamente
+ * a la hora que otro inicia (ej.: 8:00-10:00 y 10:00-12:00), NO se considera
+ * choque. Esto se logra con la comparación estricta < en ambas condiciones.
+ */
+
 #include <string.h>
-// Incluye el archivo de cabecera con las definiciones de tipos (Horario, Grupo, Curso) y prototipos de funciones
 #include "conflictos.h"
 
-/* Devuelve 1 si los horarios chocan, 0 si no chocan */
+/* Verifica si dos horarios chocan entre sí.
+ * 
+ * Condiciones para que haya choque:
+ * - Deben ser el mismo día (strcmp == 0).
+ * - Sus intervalos deben superponerse: h1.horaInicio < h2.horaFin AND h2.horaInicio < h1.horaFin
+ *   (con < estricto, evita choque cuando son contiguos: fin == inicio).
+ * 
+ * Recibe: dos Horarios h1 y h2.
+ * Devuelve: 1 si chocan, 0 si no chocan.
+ */
 int horariosChocan(Horario h1, Horario h2) {
-    // Compara los campos "dia" de ambos horarios usando strcmp
-    // strcmp retorna 0 cuando las cadenas son iguales,distinto de 0 si son diferentes
+    /* Comparar días: solo pueden chocar si son el mismo día */
     if (strcmp(h1.dia, h2.dia) != 0) {
-        // Si los días son distintos, no puede haber choque, retorna 0 (falso)
-        return 0;
+        return 0; /* Días distintos, no hay choque */
     }
 
-    // Verifica si los intervalos de horas se superponen en el mismo día
-    // La condición verifica: horaInicio de h1 < horaFin de h2 Y horaInicio de h2 < horaFin de h1
+    /* Verificar superposición de intervalos horarios.
+     * Se usa < estricto para no reportar choque cuando terminan y empiezan a la misma hora */
     if ((h1.horaInicio < h2.horaFin) && (h2.horaInicio < h1.horaFin)) {
-        // Si ambas condiciones se cumplen, hay superposición de horarios, retorna 1 (verdadero)
-        return 1;
+        return 1; /* Hay superposición → choque */
     }
 
-    // Si no hay superposición (los horarios son consecutivos o están separados), retorna 0
-    return 0;
+    return 0; /* No hay superposición o son horarios contiguos */
 }
 
-/* Devuelve 1 si hay conflicto entre cualquier horario de los dos grupos, 0 si no */
+/* Verifica si hay choque entre dos grupos.
+ * 
+ * Dos grupos chocan si al menos un horario de g1 choca con algún horario de g2.
+ * Se usa salida temprana al encontrar el primer choque para optimizar.
+ * 
+ * Recibe: dos Grupos g1 y g2.
+ * Devuelve: 1 si chocan, 0 si no.
+ */
 int gruposChocan(Grupo g1, Grupo g2) {
-    // Recorre todos los horarios del primer grupo (g1)
+    /* Comparar todos los pares de horarios entre grupos */
     for (int i = 0; i < g1.cantidadHorarios; i++) {
-        // Para cada horario de g1, recorre todos los horarios del segundo grupo (g2)
         for (int j = 0; j < g2.cantidadHorarios; j++) {
-            // Llama a horariosChocan para comparar el horario i de g1 con el horario j de g2
             if (horariosChocan(g1.horarios[i], g2.horarios[j])) {
-                // Si encuentra un choque, retorna 1 inmediatamente (no necesita seguir buscando)
-                return 1;
+                return 1; /* Se encontró al menos un choque */
             }
         }
     }
-    // Si recorrió todos los pares de horarios y no encontró ningún choque, retorna 0
-    return 0;
+    return 0; /* No hay choques entre estos grupos */
 }
 
-/* Analiza el catálogo y marca los choques en el arreglo paralelo */
+/* Analiza todo el catálogo para detectar choques entre cursos.
+ * 
+ * Estrategia:
+ * - Inicializa todos los resultados a 0.
+ * - Compara cada par de cursos (i,j) con j > i para evitar auto-comparación
+ *   y comparaciones duplicadas (A vs B es lo mismo que B vs A).
+ * - Para cada par, compara todos sus grupos entre sí. Con bandera hayChoque
+ *   y condición && !hayChoque para salida temprana al encontrar primer choque.
+ * - Si hay choque entre algún par de grupos, marca ambos cursos en resultadosChoques.
+ * 
+ * Resultados se almacenan en arreglo paralelo (no altera estructuras originales).
+ * 
+ * Recibe: cursos, cantidadCursos, resultadosChoques (arreglo de tamaño cantidadCursos).
+ * Devuelve: nada.
+ */
 void detectarChoques(Curso *cursos, int cantidadCursos, int *resultadosChoques) {
-    // Inicializa todo el arreglo de resultados en 0 (asume que no hay choques al inicio)
+    /* Inicializar arreglo de resultados: 0 = sin choque */
     for (int i = 0; i < cantidadCursos; i++) {
         resultadosChoques[i] = 0;
     }
 
-    // Recorre todos los cursos usando un bucle doble para comparar cada par de cursos
+    /* Comparar todos los pares de cursos */
     for (int i = 0; i < cantidadCursos; i++) {
-        // j empieza en i+1 para evitar comparar un curso consigo mismo y no repetir comparaciones (A vs B = B vs A)
         for (int j = i + 1; j < cantidadCursos; j++) {
-            // Variable bandera que indica si se encontró un choque entre los cursos i y j
             int hayChoque = 0;
 
-            // Recorre todos los grupos del curso i
+            /* Comparar todos los grupos entre curso i y curso j */
             for (int g1 = 0; g1 < cursos[i].cantidadGrupos && !hayChoque; g1++) {
-                // Recorre todos los grupos del curso j, se detiene si ya se encontró un choque (!hayChoque)
                 for (int g2 = 0; g2 < cursos[j].cantidadGrupos && !hayChoque; g2++) {
-                    // Compara el grupo g1 del curso i con el grupo g2 del curso j
                     if (gruposChocan(cursos[i].grupos[g1], cursos[j].grupos[g2])) {
-                        // Si hay choque entre esos grupos, marca la bandera como verdadera
-                        hayChoque = 1;
+                        hayChoque = 1; /* Se detectó choque entre estos cursos */
                     }
                 }
             }
 
-            // Si se encontró al menos un choque entre los cursos i y j
+            /* Si hay choque, marcar ambos cursos */
             if (hayChoque) {
-                // Marca el curso i como tener choque en el arreglo de resultados
                 resultadosChoques[i] = 1;
-                // Marca el curso j como tener choque en el arreglo de resultados
                 resultadosChoques[j] = 1;
             }
         }

@@ -9,7 +9,15 @@
 #define TAM_LINEA 2048
 #define RUTA_CURSOS "data/cursos.csv"
 
-/* Quita espacios y saltos de línea al inicio y al final de una cadena. */
+/*
+ * recortar
+ * 
+ * Quita espacios en blanco, tabulaciones, retornos de carro y saltos de línea
+ * al inicio y al final de una cadena.
+ * 
+ * Recibe: puntero a cadena a modificar (in-place).
+ * Devuelve: nada.
+ */
 static void recortar(char *s) {
     if (s == NULL) return;
     char *inicio = s;
