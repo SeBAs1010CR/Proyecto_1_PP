@@ -4,9 +4,9 @@ Módulo funcional del proyecto CEmestre. Lee el catálogo validado por la Etapa 
 (C) y el archivo de preferencias del estudiante, y deja los datos tipados
 listos para generar y filtrar combinaciones de horario.
 
-Esta documentación cubre el trabajo de lectura y tipado (Rol 1). La generación
-de combinaciones y la exportación se documentan en secciones aparte cuando se
-completen.
+Esta documentación cubre la lectura y tipado (Rol 1) y el filtrado y
+exportación (Rol 3). La generación de combinaciones se documenta en su
+sección aparte cuando se complete.
 
 ## Ejecución
 
@@ -29,14 +29,21 @@ etapa2/
 ├── src/
 │   ├── tipos.rkt               Estructuras de datos con contratos
 │   ├── lector-catalogo.rkt     Lee output/catalogo_salida.csv
-│   └── lector-preferencias.rkt Lee el archivo de preferencias y lo valida
+│   ├── lector-preferencias.rkt Lee el archivo de preferencias y lo valida
+│   ├── filtros.rkt             Filtro genérico de streams y filtro por créditos
+│   └── salida.rkt              Exporta las combinaciones para la etapa 3
+├── tests/
+│   ├── filtros-tests.rkt       Pruebas del filtrado (rackunit)
+│   └── salida-tests.rkt        Pruebas de la exportación (rackunit)
 └── data/
     └── preferencias.csv        Ejemplo de preferencias del estudiante
 ```
 
 Flujo: `catalogo_salida.csv` → `leer-catalogo` → lista de `Grupo`; y
 `preferencias.csv` → `leer-preferencias` → `Preferencias`. Ambos pasan a los
-módulos siguientes sin modificarse.
+módulos siguientes sin modificarse. Luego el generador (Rol 2) produce un
+stream de `Combinacion`, `filtrar-por-creditos` descarta las que no calzan con
+las preferencias y `exportar-combinaciones` escribe el archivo final.
 
 ## Estructuras de datos desarrolladas
 
@@ -124,6 +131,54 @@ creditos_min;creditos_max
 
 La lista de intereses debe tener al menos dos grupos; `validar-preferencias`
 revisa también que `creditos_min` no sea mayor que `creditos_max`.
+
+## Filtrado y polimorfismo
+
+El filtrado vive en `src/filtros.rkt` y son tres funciones encadenadas:
+
+- `filtrar-stream` es la función con **polimorfismo paramétrico**: recibe un
+  predicado y un stream de cualquier tipo de elemento y devuelve el stream con
+  los elementos que cumplen. No conoce nada de cursos ni combinaciones, por eso
+  las pruebas la ejercitan igual con números, con strings y con `Combinacion`.
+  Está implementada con recursión propia sobre `stream-cons`, así que es
+  perezosa: no evalúa más combinaciones de las que el consumidor pida (las
+  pruebas la aplican sobre un stream infinito sin colgarse).
+- `en-rango-creditos?` recibe el mínimo y el máximo de las preferencias y
+  **devuelve un predicado** sobre combinaciones. Los límites son inclusivos:
+  una combinación de exactamente `creditos_min` o `creditos_max` créditos sí
+  se acepta.
+- `filtrar-por-creditos` une las dos anteriores: toma el stream del generador
+  y las `Preferencias`, y devuelve el stream ya filtrado. Es la prueba de que
+  el polimorfismo "es útil para el programa": el filtro de créditos no tiene
+  lógica de streams propia, solo le pasa un predicado a la función genérica.
+
+## Formato de salida
+
+`src/salida.rkt` exporta las combinaciones filtradas en CSV separado por `;`,
+una línea por combinación, con encabezado:
+
+```
+cursos;creditos_totales;carreras
+CE1103-G1|MA1403-G6;8;Computadores
+```
+
+- `cursos`: pares curso-grupo (`codigo-Gnumero`) unidos con `|`.
+- `creditos_totales`: suma de créditos de la combinación.
+- `carreras`: carreras de origen de los cursos, unidas con `|`.
+
+**Justificación.** La decisión real detrás del formato es que la etapa 3
+(Prolog) consume cada combinación como una unidad: una línea por combinación
+permite convertir cada línea en un hecho Prolog (por ejemplo
+`combinacion(["CE1103-G1","MA1403-G6"], 8, ...)`) sin reconstruir nada a
+partir de varias líneas. Además se mantienen las convenciones que el proyecto
+arrastra desde la etapa 1 — separador `;` para campos y `|` para listas dentro
+de un campo — de modo que quien ya leyó el catálogo puede leer este archivo
+con el mismo código. La exportación recorre el stream con recursión de cola
+(un acumulador en lugar de un contador mutable) y devuelve cuántas
+combinaciones escribió, para que `main.rkt` pueda reportarlo.
+
+La ruta del archivo es un parámetro de `exportar-combinaciones`; el punto de
+entrada decide dónde escribir (por ejemplo `output/combinaciones.csv`).
 
 ## Decisiones de diseño
 
