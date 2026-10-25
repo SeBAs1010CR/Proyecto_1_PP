@@ -1,0 +1,152 @@
+# CEmestre - Etapa 2 (Racket)
+
+Módulo funcional del proyecto CEmestre. Lee el catálogo validado por la Etapa 1
+(C) y el archivo de preferencias del estudiante, y deja los datos tipados
+listos para generar y filtrar combinaciones de horario.
+
+Esta documentación cubre el trabajo de lectura y tipado (Rol 1). La generación
+de combinaciones y la exportación se documentan en secciones aparte cuando se
+completen.
+
+## Ejecución
+
+Desde la carpeta `etapa2/`:
+
+```
+racket main.rkt [ruta-catalogo] [ruta-preferencias]
+```
+
+- Por defecto lee `../output/catalogo_salida.csv` (generado por C) y
+  `data/preferencias.csv`.
+- El catálogo debe generarse primero con el programa de C desde la raíz del
+  proyecto.
+
+## Arquitectura
+
+```
+etapa2/
+├── main.rkt                    Punto de entrada: carga y muestra los datos
+├── src/
+│   ├── tipos.rkt               Estructuras de datos con contratos
+│   ├── lector-catalogo.rkt     Lee output/catalogo_salida.csv
+│   └── lector-preferencias.rkt Lee el archivo de preferencias y lo valida
+└── data/
+    └── preferencias.csv        Ejemplo de preferencias del estudiante
+```
+
+Flujo: `catalogo_salida.csv` → `leer-catalogo` → lista de `Grupo`; y
+`preferencias.csv` → `leer-preferencias` → `Preferencias`. Ambos pasan a los
+módulos siguientes sin modificarse.
+
+## Estructuras de datos desarrolladas
+
+Todas las estructuras están en `src/tipos.rkt`, se definen con `struct/contract`
+y son inmutables (sin campos mutables ni `set!`). Si un dato no cumple el
+contrato, falla al construirse indicando el campo.
+
+### Horario
+
+Un bloque horario de un grupo.
+
+| Campo        | Tipo     | Ejemplo  |
+|--------------|----------|----------|
+| `dia`        | string   | `"MIE"`  |
+| `hora-inicio`| string   | `"07:30"`|
+| `hora-fin`   | string   | `"09:20"`|
+
+### Grupo
+
+Un grupo de un curso, tal como lo exporta el módulo de C.
+
+| Campo               | Tipo                     |
+|---------------------|--------------------------|
+| `codigo`            | string                   |
+| `nombre`            | string                   |
+| `creditos`          | entero no negativo       |
+| `grupo-num`         | entero no negativo       |
+| `tipo`              | string                   |
+| `profesor`          | string                   |
+| `horarios`          | lista de `Horario`       |
+| `requisitos`        | lista de strings         |
+| `correquisitos`     | lista de strings         |
+| `choca`             | `0` o `1`                |
+| `puede-matricular`  | `0` o `1`                |
+| `carrera`           | string                   |
+
+### Preferencias
+
+Lo que el estudiante quiere matricular.
+
+| Campo           | Tipo                                      |
+|-----------------|-------------------------------------------|
+| `cursos-interes`| lista de pares `(codigo . numero-grupo)` |
+| `creditos-min`  | entero no negativo                        |
+| `creditos-max`  | entero no negativo                        |
+
+### Combinacion
+
+Definida para el Rol de generación. Una combinación es un grupo por curso, con
+sus créditos totales y las carreras de origen.
+
+| Campo              | Tipo                  |
+|--------------------|-----------------------|
+| `grupos`           | lista de `Grupo`      |
+| `creditos-totales` | entero no negativo    |
+| `carreras`         | lista de strings      |
+
+## Formato de entrada
+
+### Catálogo (`output/catalogo_salida.csv`)
+
+Separador `;`, una línea por grupo, primera línea de encabezado:
+
+```
+codigo;nombre;creditos;grupo;tipo;profesor;horarios;requisitos;correquisitos;choca;puede_matricular;carrera
+```
+
+- `horarios`: bloques separados por `|`, por ejemplo `MIE 07:30-09:20|VIE 07:30-09:20`.
+- `requisitos` y `correquisitos`: códigos separados por `,` (vacío si no hay).
+- `carrera`: la carrera que aporta el curso (ver decisiones).
+
+El lector rechaza líneas con un número de campos distinto de 12 y avisa que
+probablemente falta la columna `carrera`.
+
+### Preferencias (`data/preferencias.csv`)
+
+```
+cursos_interes
+CE1101,GRUPO 3
+CE1103,GRUPO 3
+MA1403,GRUPO 6
+creditos_min;creditos_max
+12;18
+```
+
+La lista de intereses debe tener al menos dos grupos; `validar-preferencias`
+revisa también que `creditos_min` no sea mayor que `creditos_max`.
+
+## Decisiones de diseño
+
+- **Contratos en lugar de Typed Racket.** Se usó `struct/contract` porque
+  valida cada campo en el momento de construir el dato y reporta el campo
+  incorrecto. Así los errores aparecen cerca de la lectura y no más adelante
+  en la generación.
+- **Lectura por recursión, sin mutación.** Los divisores de texto y el lector
+  de preferencias usan bucles recursivos con acumuladores, de acuerdo con el
+  requisito de inmutabilidad.
+- **Carrera por curso derivada de la guía de horarios.** Los cursos de
+  Ingeniería en Computadores y los de Enseñanza de la Matemática se separan con
+  las tablas de la hoja "Cursos CE" de `data/Grupos CE.xlsx` y la guía de la
+  licenciatura. La columna `carrera` se agregó a `data/cursos.csv` y el módulo
+  de C la exporta en el catálogo.
+- **Validación de preferencias separada de la lectura.** `leer-preferencias`
+  solo interpreta el archivo; `validar-preferencias` devuelve mensajes. Así
+  `main.rkt` puede mostrar advertencias sin detener la carga.
+
+## Caso límite encontrado
+
+Al leer el catálogo de C, el lector se rompía porque el módulo de C no exportaba
+la columna `carrera`; la salida tenía 11 campos y el lector esperaba 12. Se
+corrigió agregando la columna en `data/cursos.csv` y en `src/salida.c`, y el
+lector ahora rechaza explícitamente las líneas con número de campos incorrecto
+con un mensaje que indica la causa.
