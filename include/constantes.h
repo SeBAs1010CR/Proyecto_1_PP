@@ -50,6 +50,11 @@
  * Ejemplos: "Regular", "Semipresencial", "Virtual", "Asistida", "Grupo RN". */
 #define MAX_TIPO_LEN 20
 
+/* Tamaño máximo (en bytes) del nombre de la carrera que aporta un curso.
+ *
+ * Ejemplos: "Ingeniería en Computadores", "Enseñanza de la Matemática". */
+#define MAX_CARRERA_LEN 60
+
 /* Tamaño máximo (en bytes) del día de un horario.
  * 
  * Se usa en formato normalizado de 3 letras: "LUN", "MAR", "MIE", "JUE",

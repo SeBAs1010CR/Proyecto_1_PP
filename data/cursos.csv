@@ -1,148 +1,198 @@
-codigo;curso;grupo;tipo;profesor;horario;creditos;horas;sede;requisitos;correquisitos
-CE1101;Introducción a la programación;3;Regular;Araya Martinez Leonardo;MIE[07:30-09:20], VIE[07:30-09:20];3;9;Cartago;;
-CE1101;Introducción a la programación;4;Regular;Gamboa Ramirez Santiago;MIE[15:00-16:50], VIE[15:00-16:50];3;9;Cartago;;
-CE1101;Introducción a la programación;5;Regular;Ramirez Trejos Ellioth;MIE[15:00-16:50], VIE[15:00-16:50];3;9;Cartago;;
-CE1101;Introducción a la programación;1;Semipresencial;Schmidt Peralta Jeff;MAR[07:30-09:20], JUE[07:30-09:20];3;9;Cartago;;
-CE1101;Introducción a la programación;2;Regular;Schmidt Peralta Jeff;MAR[09:30-11:20], JUE[09:30-11:20];3;9;Cartago;;
-CE1103;Algoritmos y estructuras de datos I;3;Semipresencial;Barboza Artavia Luis;MAR[09:30-11:20], JUE[09:30-11:20];4;12;Cartago;CE1101,CE1104,MA1403;
-CE1103;Algoritmos y estructuras de datos I;2;Semipresencial;Gamboa Ramirez Santiago;MAR[15:00-16:50], JUE[15:00-16:50];4;12;Cartago;CE1101,CE1104,MA1403;
-CE1103;Algoritmos y estructuras de datos I;1;Semipresencial;Ramirez Trejos Ellioth;MIE[17:00-18:50], VIE[17:00-18:50];4;12;Cartago;CE1101,CE1104,MA1403;
-CE1103;Algoritmos y estructuras de datos I;1;Semipresencial;Vargas Rivera Andres;MAR[17:00-18:50], JUE[17:00-18:50];4;12;Cartago;CE1101,CE1104,MA1403;
-CE1104;Fundamentos de sistemas computacionales;2;Regular;Araya Martinez Leonardo;MIE[09:30-11:20], VIE[09:30-11:20];3;9;Cartago;;CE1101
-CE1104;Fundamentos de sistemas computacionales;3;Regular;Barboza Artavia Luis;MAR[09:30-11:20], JUE[09:30-11:20];3;9;Cartago;;CE1101
-CE1104;Fundamentos de sistemas computacionales;5;Regular;Calderon Prado Kimberly;MAR[15:00-16:50], JUE[15:00-16:50];3;9;Cartago;;CE1101
-CE1104;Fundamentos de sistemas computacionales;4;Regular;Gamboa Ramirez Santiago;MIE[17:00-18:50], VIE[17:00-18:50];3;9;Cartago;;CE1101
-CE1104;Fundamentos de sistemas computacionales;1;Regular;Villegas Lemus Milton;MAR[07:30-09:20], JUE[07:30-09:20];3;9;Cartago;;CE1101
-CE1104;Fundamentos de sistemas computacionales;1;Regular;Villegas Lemus Milton;MAR[07:30-09:20], JUE[07:30-09:20];3;9;Cartago;;CE1101
-CE1105;Principios de modelado en Ingeniería;3;Semipresencial;Hernandez Vasquez Marco;MAR[19:00-20:50], JUE[19:00-20:50];3;9;Cartago;CE1104;
-CE1105;Principios de modelado en Ingeniería;2;Semipresencial;Mora Rojas Diego;MAR[17:00-18:50], JUE[17:00-18:50];3;9;Cartago;CE1104;
-CE1105;Principios de modelado en Ingeniería;1;Semipresencial;Mora Rojas Diego;MAR[17:00-18:50], JUE[17:00-18:50];3;9;Cartago;CE1104;
-CE1105;Principios de modelado en Ingeniería;2;Semipresencial;Rivera Meneses Marco;MIE[17:00-18:50], VIE[17:00-18:50];3;9;Cartago;CE1104;
-CE2103;Algoritmos y estructuras de datos II;2;Semipresencial;Hernandez Vasquez Marco;MAR[17:00-18:50], JUE[17:00-18:50];4;12;Cartago;CE1103,CE1105;
-CE2103;Algoritmos y estructuras de datos II;1;Semipresencial;Ramirez Herrera Jose Isaac;MIE[19:00-20:50], VIE[19:00-20:50];4;12;Cartago;CE1103,CE1105;
-CE2103;Algoritmos y estructuras de datos II;1;Semipresencial;Ramirez Herrera Jose Isaac;MAR[07:30-09:20], JUE[07:30-09:20];4;12;Cartago;CE1103,CE1105;
-MA0101;Matemática General;30;Semipresencial;Reiman Acuña Chacón;Mié 18:00–20:50 / Vie 18:00–19:50;2;5;Cartago;;
-MA0101;Matemática General;21;Regular;Andy Alvarado Solano;Mié 07:30–10:20 / Vie 07:30–09:20;2;5;Cartago;;
-MA0101;Matemática General;28;Grupo RN;Roberto Azofeifa Cubero;Mié 16:00–18:50 / Vie 16:00–17:50;2;5;Cartago;;
-MA0101;Matemática General;18;Regular;Erick Chacón Vargas;Mar 17:00–19:50 / Jue 17:00–18:50;2;5;Cartago;;
-MA0101;Matemática General;4;Regular;Marcial Cordero Quirós;Mar 09:30–11:20 / Jue 09:30–12:20;2;5;Cartago;;
-MA1102;Cálculo Diferencial e Integral;11;Regular;Roberto Azofeifa Cubero;Mié 07:30–10:20 / Vie 07:30–09:20;4;5;Cartago;MA0101;
-MA1102;Cálculo Diferencial e Integral;4;Asistida;Manuel Calderón Solano;Mar 09:30–12:20 / Jue 10:30–12:20;4;5;Cartago;MA0101;
-MA1102;Cálculo Diferencial e Integral;13;Regular;Manuel Calderón Solano;Mié 13:00–15:50 / Vie 13:00–14:50;4;5;Cartago;MA0101;
-MA1102;Cálculo Diferencial e Integral;16;Semipresencial;Juan José Fallas Monge;Mié 16:00–18:50 / Vie 16:00–17:50;4;5;Cartago;MA0101;
-MA1102;Cálculo Diferencial e Integral;2;Grupo RN;Jorge Jiménez Madrigal;Mar 07:30–09:20 / Jue 07:30–10:20;4;5;Cartago;MA0101;
-MA1103;Cálculo y Álgebra Lineal;5;Regular;Jorge Luis Chinchilla Valverde;Mar 15:00–16:50 / Jue 15:00–16:50;4;4;Cartago;MA1102;
-MA1103;Cálculo y Álgebra Lineal;4;Regular;Geovanni Figueroa Mata;Mar 13:00–14:50 / Jue 13:00–14:50;4;4;Cartago;MA1102;
-MA1103;Cálculo y Álgebra Lineal;8;Regular;Geovanni Figueroa Mata;Mié 13:00–14:50 / Vie 13:00–14:50;4;4;Cartago;MA1102;
-MA1103;Cálculo y Álgebra Lineal;15;Regular;Geovanni Figueroa Mata;Mar 18:00–19:50 / Jue 18:00–19:50;4;4;Cartago;MA1102;
-MA1103;Cálculo y Álgebra Lineal;3;Regular;Marco Vinicio Gutiérrez Montenegro;Mar 09:30–11:20 / Jue 09:30–11:20;4;4;Cartago;MA1102;
-MA1403;Matemática Discreta;10;Regular;Jeison Esquivel Samudio;Mié 18:00–19:50 / Vie 18:00–19:50;4;4;Cartago;;
-MA1403;Matemática Discreta;3;Regular;Juan José Fallas Monge;Mar 13:00–14:50 / Jue 13:00–14:50;4;4;Cartago;;
-MA1403;Matemática Discreta;6;Regular;Juan José Fallas Monge;Mié 07:30–09:20 / Vie 07:30–09:20;4;4;Cartago;;
-MA1403;Matemática Discreta;5;Semipresencial;Grettel Gutiérrez Ruiz;Mar 18:00–19:50 / Jue 18:00–19:50;4;4;Cartago;;
-MA1403;Matemática Discreta;4;Regular;Greivin Ramírez Arce;Mar 16:00–17:50 / Jue 16:00–17:50;4;4;Cartago;;
-MA2104;Cálculo Superior;2;Semipresencial;Alexander Borbón Alpízar;Mar 18:00–19:50 / Jue 18:00–19:50;4;4;Cartago;MA1103;
-MA2104;Cálculo Superior;7;Regular;Erick Chacón Vargas;Mar 13:00–14:50 / Jue 13:00–14:50;4;4;Cartago;MA1103;
-MA2104;Cálculo Superior;6;Regular;Jeison Esquivel Samudio;Sáb 07:30–11:20;4;4;Cartago;MA1103;
-MA2104;Cálculo Superior;5;Semipresencial;Arturo Vega Vasquez;Sáb 07:30–11:20;4;4;Cartago;MA1103;
-MA2104;Cálculo Superior;4;Regular;Alejandra Jiménez Romero;Mar 09:30–11:20 / Jue 09:30–11:20;4;4;Cartago;MA1103;
-FI1101;Física general I;8;Regular;Corrales Quesada Esteban;Mar 15:00–16:50 / Jue 15:00–16:50;3;4;Cartago;MA1102;
-FI1101;Física general I;9;Regular;Corrales Quesada Esteban;Mar 17:00–18:50 / Jue 17:00–18:50;3;4;Cartago;MA1102;
-FI1101;Física general I;10;Semipresencial;Elizondo Zúñiga Jennifer;Mié 09:30–11:20 / Vie 09:30–11:20;3;4;Cartago;MA1102;
-FI1101;Física general I;4;Regular;Elizondo Zúñiga Jennifer;Mar 09:30–11:20 / Jue 09:30–11:20;3;4;Cartago;MA1102;
-FI1102;Física general II;1;Regular;Lobo Zamora Juan Carlos;Mar 07:30–09:20 / Jue 07:30–09:20;3;4;Cartago;FI1101;MA1102
-FI1102;Física general II;7;Regular;Murillo Zumbado Gustavo;Mié 09:30–11:20 / Vie 09:30–11:20;3;4;Cartago;FI1101;MA1102
-FI1102;Física general II;6;Regular;Murillo Zumbado Gustavo;Mié 07:30–09:20 / Vie 07:30–09:20;3;4;Cartago;FI1101;MA1102
-FI1102;Física general II;11;Regular;Murillo Zumbado Gustavo;Mar 09:30–11:20 / Jue 09:30–11:20;3;4;Cartago;FI1101;MA1102
-FI1102;Física general II;5;Semipresencial;Oreamuno Madriz Rafael;Mar 15:00–16:50 / Jue 15:00–16:50;3;4;Cartago;FI1101;MA1102
-FI1201;Laboratorio física general I;11;Regular;Alfaro Alvarado José Abrahán;Jue 07:30–09:20;1;2;Cartago;;FI1101
-FI1201;Laboratorio física general I;27;Regular;Alfaro Alvarado José Abrahán;Jue 17:00–18:50;1;2;Cartago;;FI1101
-FI1201;Laboratorio física general I;23;Regular;Cambronero Cordero Michael;Mié 15:00–16:50;1;2;Cartago;;FI1101
-FI1201;Laboratorio física general I;24;Regular;Cambronero Cordero Michael;Mié 17:00–18:50;1;2;Cartago;;FI1101
-FI1201;Laboratorio física general I;3;Regular;Campos Rodríguez Melania;Mar 13:00–14:50;1;2;Cartago;;FI1101
-FI1202;Laboratorio física general II;7;Regular;Araya Solano Luis Alonso;Mié 17:00–18:50;1;2;Cartago;FI1201;FI1102
-FI1202;Laboratorio física general II;1;Regular;Araya Solano Luis Alonso;Mar 09:30–11:20;1;2;Cartago;FI1201;FI1102
-FI1202;Laboratorio física general II;2;Regular;Araya Solano Luis Alonso;Mar 13:00–14:50;1;2;Cartago;FI1201;FI1102
-FI1202;Laboratorio física general II;2;Regular;Campos Rodríguez Melania;Mar 13:00–14:50;1;2;Cartago;FI1201;FI1102
-FI1202;Laboratorio física general II;3;Regular;Campos Rodríguez Melania;Mar 17:00–18:50;1;2;Cartago;FI1201;FI1102
-QU1102;Laboratorio de química básica I;2;Regular;Abarca Guerrero Lilliana;Mar 07:30–09:20;1;2;Cartago;;QU1106
-QU1102;Laboratorio de química básica I;11;Regular;Abarca Guerrero Lilliana;Mar 15:00–16:50;1;2;Cartago;;QU1106
-QU1102;Laboratorio de química básica I;1;Regular;Araya Carvajal Fabio;Mar 07:30–09:20;1;2;Cartago;;QU1106
-QU1102;Laboratorio de química básica I;9;Regular;Araya Carvajal Fabio;Mar 13:00–14:50;1;2;Cartago;;QU1106
-QU1102;Laboratorio de química básica I;6;Regular;Arce Rojas Heilen;Mar 09:30–11:20;1;2;Cartago;;QU1106
-QU1106;Química Básica I;4;Semipresencial;Vargas Camareno Maricruz;Mar 09:30–11:20 / Jue 09:30–11:20;3;4;Cartago;;QU1102
-QU1106;Química Básica I;7;Semipresencial;Vargas Camareno Maricruz;Mar 13:00–14:50 / Jue 13:00–14:50;3;4;Cartago;;QU1102
-QU1106;Química Básica I;9;Semipresencial;Vargas Camareno Maricruz;Mar 15:00–16:50 / Jue 15:00–16:50;3;4;Cartago;;QU1102
-QU1106;Química Básica I;19;Semipresencial;Villalta Romero Fabian;Mié 13:00–14:50 / Vie 13:00–14:50;3;4;Cartago;;QU1102
-QU1106;Química Básica I;11;Semipresencial;Villalta Romero Fabian;Mié 13:00–14:50 / Vie 13:00–14:50;3;4;Cartago;;QU1102
-CI1407;Habilidades de comunicación en Ingeniería;2;Virtual;Morales Garay Saray;Mar 17:00–19:50;2;6;Cartago;;
-CI1407;Habilidades de comunicación en Ingeniería;4;Virtual;Morales Garay Saray;Jue 13:00–15:50;2;6;Cartago;;
-CI1407;Habilidades de comunicación en Ingeniería;3;Regular;Morales Solano Paola Natalia;Lun 09:30–12:20;2;6;Cartago;;
-CI1407;Habilidades de comunicación en Ingeniería;1;Virtual;Morales Solano Paola Natalia;Mié 07:30–10:20;2;6;Cartago;;
-CI1407;Habilidades de comunicación en Ingeniería;3;Virtual;Morales Solano Paola Natalia;Jue 13:00–15:50;2;6;Cartago;;
-CS1502;Introducción a la técnica, ciencia y tecnología;5;Regular;Bojorge Murillo Alexander;Mié 09:30–11:20;1;2;Cartago;;
-CS1502;Introducción a la técnica, ciencia y tecnología;7;Regular;Bojorge Murillo Alexander;Lun 18:00–19:50;1;2;Cartago;;
-CS1502;Introducción a la técnica, ciencia y tecnología;11;Regular;Bojorge Murillo Alexander;Mié 15:00–16:50;1;2;Cartago;;
-CS1502;Introducción a la técnica, ciencia y tecnología;18;Regular;Bojorge Murillo Alexander;Mar 15:00–16:50;1;2;Cartago;;
-CS1502;Introducción a la técnica, ciencia y tecnología;2;Regular;Bojorge Murillo Alexander;Mié 09:30–11:20;1;2;Cartago;;
-CS2101;Ambiente humano;1;Virtual;Franceschi Sojo Kattia;Mié 09:30–12:20;2;6;Cartago;;
-CS2101;Ambiente humano;2;Virtual;Franceschi Sojo Kattia;Mié 13:00–15:50;2;6;Cartago;;
-CS2101;Ambiente humano;5;Virtual;Murillo Solís Javier;Jue 09:30–12:20;2;6;Cartago;;
-CS2101;Ambiente humano;4;Virtual;Ortiz Álvarez Jorge Isaac;Mié 15:00–17:50;2;6;Cartago;;
-CS2101;Ambiente humano;5;Virtual;Ortiz Álvarez Jorge Isaac;Mié 09:30–12:20;2;6;Cartago;;
-EL2113;Circuitos eléctricos en corriente continua;4;Regular;Hernández Rivera Miguel;Lun 07:30–09:20 / Mié 07:30–09:20;4;4;Cartago;FI1101,MA1102;
-EL2113;Circuitos eléctricos en corriente continua;4;Regular;Hernández Rivera Miguel;Lun 07:30–09:20 / Mié 07:30–09:20;4;4;Cartago;FI1101,MA1102;
-EL2113;Circuitos eléctricos en corriente continua;2;Regular;Pérez Rodríguez Javier;Mar 09:30–11:20 / Jue 09:30–11:20;4;4;Cartago;FI1101,MA1102;
-EL2113;Circuitos eléctricos en corriente continua;2;Regular;Pérez Rodríguez Javier;Mar 09:30–11:20 / Jue 09:30–11:20;4;4;Cartago;FI1101,MA1102;
-EL2113;Circuitos eléctricos en corriente continua;3;Semipresencial;Picado García Fabián Alberto;Lun 07:30–11:20;4;4;Cartago;FI1101,MA1102;
-SE1101;Artes dramáticas;2;Regular;Gómez Jiménez Andrea;Mar 17:00–18:50;0;2;Cartago;;
-SE1105;Artes musicales;5;Regular;Meza Solano Vinicio;Jue 15:00–16:50;0;2;Cartago;;
-SE1106;Apreciación literaria;1;Regular;Ramos Vargas Arnoldo;Mar 07:30–09:20;0;2;Cartago;;
-SE1107;Apreciación de cine;2;Regular;Díaz Brenes Nelson;Vie 13:00–14:50;0;2;Cartago;;
-SE1109;Dinámica de la cultura;1;Virtual;Sancho Martínez Laura Karina;Lun 07:30–09:20;0;2;Cartago;;
-SE1201;Atletismo;2;Virtual;Loria Solano Johnny;Mar 07:30–09:20;0;2;Cartago;;
-SE1204;Natación;3;Regular;Sánchez Pérez Lisbeth;Mié 13:00–14:50;0;2;Cartago;;
-SE1205;Juegos y deportes en conjunto;8;Regular;Cabrera Araya Gustavo Alcides;Mié 09:30–11:20;0;2;Cartago;;
-SE1206;Acondicionamiento físico;3;Regular;Loria Solano Johnny;Mar 09:30–11:20;0;2;Cartago;;
-SE1209;Béisbol-softbol;1;Regular;Méndez Solano Miguel;Lun 07:30–09:20;0;2;Cartago;;
-FH0246;La música nos define: visión desde la etnomusicología;1;Virtual;Monge Pérez Luis Diego;Mié 18:00–20:50;0;2;Cartago;;
-FH0251;El universo de Star Wars: entre la ciencia ficción, la política y la mitología;1;Virtual;Vallecillo Alfaro Johanny;Mar 18:00–20:50;0;2;Cartago;;
-FH0035;Globalización y humanismo;1;Virtual;Rodríguez Morales Oscar;Mar 17:00–19:50;0;2;Cartago;;
-FH0047;Educación en nuestros tiempos;1;Virtual;Rivera Rojas Fanni;Mié 17:00–19:50;0;2;Cartago;;
-FH0147;Sexo y género, en la vida y el amor;1;Regular;Artavia Granados Xinia;Sáb 07:30–12:20;0;2;Cartago;;
-EM1401;Introducción a la pedagogía;1;Regular;Grettel Gutierrez Ruiz;MIE[09:30-11:20],VIE[09:30-11:20];3;4;Cartago;;
-EM1401;Introducción a la pedagogía;2;Regular;Maria Fernanda Mora Casasola;MIE[09:30-11:20],VIE[09:30-11:20];3;4;Cartago;;
-EM1404;Teorías psicopedagógicas del aprendizaje;1;Regular;Alejandra Alfaro Barquero;MAR[15:00-16:50],JUE[15:00-16:50];3;4;Cartago;;
-EM1600;Tecnologías digitales aplicadas a la matemática educativa I;1;Regular;Edward Parra Salazar;MIE[13:00-14:50],VIE[13:00-14:50];3;4;Cartago;;
-EM1605;Fundamentos de matemática I;1;Regular;Jorge Monge Fallas;MAR[09:30-11:20],MIE[07:30-09:20],JUE[09:30-11:20];4;12;Cartago;;
-EM1606;Fundamentos de matemática II;1;Regular;Jorge Monge Fallas;MAR[09:30-11:20],MIE[07:30-09:20],VIE[07:30-09:20];4;12;Cartago;EM1605;
-EM1607;Didáctica de la geometría;1;Regular;Carlos Monge Madriz;MIE[13:00-14:50],VIE[13:00-14:50];3;4;Cartago;EM1608,EM2606;
-EM1608;Didáctica del álgebra y funciones;1;Regular;Zuleyka Suarez Valdes-Ayala;MAR[07:30-09:20],JUE[07:30-09:20];3;4;Cartago;EM1606,EM2408;
-EM2408;Aprendizaje y didáctica de la matemática;1;Regular;Sigurd Ramos Marin;MAR[16:00-18:50];2;6;Cartago;EM1401;
-EM2603;Cálculo y análisis I;1;Regular;Andy Alvarado Solano;MAR[09:30-11:20],JUE[09:30-11:20];5;4;Cartago;EM3607;
-EM2604;Geometría I;1;Regular;Randall Blanco Benamburg;MAR[13:00-14:50],JUE[13:00-14:50];4;4;Cartago;MA1403;
-EM2606;Geometría II;1;Regular;Randall Blanco Benamburg;MIE[13:00-14:50],VIE[13:00-14:50];4;4;Cartago;EM2604;
-EM2608;Elementos de análisis de datos y probabilidad;1;Regular;Guillermo Ramirez Montes;MAR[13:00-14:50],JUE[13:00-14:50];3;4;Cartago;EM1606;
-EM3048;Atención a la diversidad en la enseñanza y el aprendizaje de la matemática;1;Regular;Marcela Marrero Calvo;MIE[07:30-09:20],VIE[07:30-09:20];3;9;Cartago;EM3407;
-EM3407;Psicología del desarrollo;1;Tutoría;Katherine Palma Picado;MIE[07:30-10:20];3;3;Cartago;EM1404;
-EM3607;Álgebra lineal;1;Regular;Juan Pablo Soto Quiros;MAR[13:00-14:50],JUE[13:00-14:50];5;4;Cartago;EM1606;EM1608
-EM1609;Didáctica de la probabilidad y la estadística;1;Regular;Greivin Ramirez Arce;MAR[07:30-09:20],JUE[07:30-09:20];3;4;Cartago;;
-MA1403;Matemática Discreta;1;Regular;Juan Jose Fallas Monge;MAR[13:00-14:50];4;4;Cartago;;
-CI1230;Inglés I;1;Virtual;Sonia Albertazzi Osorio;LUN[07:30-10:20];2;6;Cartago;CI0200,CI0202;
-CI1230;Inglés I;7;Virtual;Sonia Albertazzi Osorio;MIE[09:30-12:20];2;6;Cartago;CI0200,CI0202;
-CI1230;Inglés I;2;Regular;Sonia Albertazzi Osorio;MAR[07:30-10:20];2;6;Cartago;CI0200,CI0202;
-CI1230;Inglés I;9;Regular;Sonia Albertazzi Osorio;JUE[13:00-15:50];2;6;Cartago;CI0200,CI0202;
-CI1230;Inglés I;8;Regular;Carlos Andres Gomez Montoya;MIE[18:00-20:50],JUE[18:00-20:50];2;6;Cartago;CI0200,CI0202;
-CI1231;Inglés II;10;Virtual;Esteban Fuentes Mora;MIE[16:00-18:50];2;3;Cartago;CI1230;
-CI1231;Inglés II;11;Regular;Esteban Fuentes Mora;MIE[13:00-15:50];2;3;Cartago;CI1230;
-CI1231;Inglés II;5;Virtual;Carlos Andres Gomez Montoya;MIE[18:00-20:50];2;3;Cartago;CI1230;
-CI1231;Inglés II;11;Virtual;Carlos Andres Gomez Montoya;JUE[17:00-19:50];2;3;Cartago;CI1230;
-CI1231;Inglés II;5;Regular;Carlos Andres Gomez Montoya;MAR[18:00-20:50];2;3;Cartago;CI1230;
-CI1405;Fundamentos de comunicación académica;1;Virtual;Gabriela Amador Solano;MAR[07:30-09:20],JUE[07:30-09:20];3;9;Cartago;;
-CI1405;Fundamentos de comunicación académica;2;Virtual;Saray Morales Garay;MAR[07:30-09:20],JUE[07:30-09:20];3;9;Cartago;;
-CI1406;Argumentación e investigación en comunicación académica;1;Regular;Paola Natalia Morales Solano;MAR[07:30-09:20],JUE[07:30-09:20];3;9;Cartago;CI1405;
-CA2125;Elementos de computación;9;Semipresencial;Rodrigo Bogarin Navarro;MAR[19:00-20:50],JUE[19:00-20:50];3;4;Cartago;;
-CA2125;Elementos de computación;9;Semipresencial;Ivan Campos Fernandez;MIE[17:00-18:50],VIE[17:00-18:50];3;4;Cartago;;
-CA2125;Elementos de computación;10;Semipresencial;Ivan Campos Fernandez;MAR[19:00-20:50],JUE[19:00-20:50];3;4;Cartago;;
-CA2125;Elementos de computación;5;Semipresencial;Ivan Campos Fernandez;MAR[17:00-18:50],JUE[17:00-18:50];3;4;Cartago;;
-CA2125;Elementos de computación;6;Semipresencial;Ivan Campos Fernandez;MAR[19:00-20:50],JUE[19:00-20:50];3;4;Cartago;;
+codigo;curso;grupo;tipo;profesor;horario;creditos;horas;sede;requisitos;correquisitos;carrera
+CE1101;Introducción a la programación;3;Regular;Araya Martinez Leonardo;MIE[07:30-09:20], VIE[07:30-09:20];3;9;Cartago;;;Ingeniería en Computadores
+CE1101;Introducción a la programación;4;Regular;Gamboa Ramirez Santiago;MIE[15:00-16:50], VIE[15:00-16:50];3;9;Cartago;;;Ingeniería en Computadores
+CE1101;Introducción a la programación;5;Regular;Ramirez Trejos Ellioth;MIE[15:00-16:50], VIE[15:00-16:50];3;9;Cartago;;;Ingeniería en Computadores
+CE1101;Introducción a la programación;1;Semipresencial;Schmidt Peralta Jeff;MAR[07:30-09:20], JUE[07:30-09:20];3;9;Cartago;;;Ingeniería en Computadores
+CE1101;Introducción a la programación;2;Regular;Schmidt Peralta Jeff;MAR[09:30-11:20], JUE[09:30-11:20];3;9;Cartago;;;Ingeniería en Computadores
+CE1103;Algoritmos y estructuras de datos I;3;Semipresencial;Barboza Artavia Luis;MAR[09:30-11:20], JUE[09:30-11:20];4;12;Cartago;CE1101,CE1104,MA1403;;Ingeniería en Computadores
+CE1103;Algoritmos y estructuras de datos I;2;Semipresencial;Gamboa Ramirez Santiago;MAR[15:00-16:50], JUE[15:00-16:50];4;12;Cartago;CE1101,CE1104,MA1403;;Ingeniería en Computadores
+CE1103;Algoritmos y estructuras de datos I;1;Semipresencial;Ramirez Trejos Ellioth;MIE[17:00-18:50], VIE[17:00-18:50];4;12;Cartago;CE1101,CE1104,MA1403;;Ingeniería en Computadores
+CE1103;Algoritmos y estructuras de datos I;1;Semipresencial;Vargas Rivera Andres;MAR[17:00-18:50], JUE[17:00-18:50];4;12;Cartago;CE1101,CE1104,MA1403;;Ingeniería en Computadores
+CE1104;Fundamentos de sistemas computacionales;2;Regular;Araya Martinez Leonardo;MIE[09:30-11:20], VIE[09:30-11:20];3;9;Cartago;;CE1101;Ingeniería en Computadores
+CE1104;Fundamentos de sistemas computacionales;3;Regular;Barboza Artavia Luis;MAR[09:30-11:20], JUE[09:30-11:20];3;9;Cartago;;CE1101;Ingeniería en Computadores
+CE1104;Fundamentos de sistemas computacionales;5;Regular;Calderon Prado Kimberly;MAR[15:00-16:50], JUE[15:00-16:50];3;9;Cartago;;CE1101;Ingeniería en Computadores
+CE1104;Fundamentos de sistemas computacionales;4;Regular;Gamboa Ramirez Santiago;MIE[17:00-18:50], VIE[17:00-18:50];3;9;Cartago;;CE1101;Ingeniería en Computadores
+CE1104;Fundamentos de sistemas computacionales;1;Regular;Villegas Lemus Milton;MAR[07:30-09:20], JUE[07:30-09:20];3;9;Cartago;;CE1101;Ingeniería en Computadores
+CE1104;Fundamentos de sistemas computacionales;1;Regular;Villegas Lemus Milton;MAR[07:30-09:20], JUE[07:30-09:20];3;9;Cartago;;CE1101;Ingeniería en Computadores
+CE1105;Principios de modelado en Ingeniería;3;Semipresencial;Hernandez Vasquez Marco;MAR[19:00-20:50], JUE[19:00-20:50];3;9;Cartago;CE1104;;Ingeniería en Computadores
+CE1105;Principios de modelado en Ingeniería;2;Semipresencial;Mora Rojas Diego;MAR[17:00-18:50], JUE[17:00-18:50];3;9;Cartago;CE1104;;Ingeniería en Computadores
+CE1105;Principios de modelado en Ingeniería;1;Semipresencial;Mora Rojas Diego;MAR[17:00-18:50], JUE[17:00-18:50];3;9;Cartago;CE1104;;Ingeniería en Computadores
+CE1105;Principios de modelado en Ingeniería;2;Semipresencial;Rivera Meneses Marco;MIE[17:00-18:50], VIE[17:00-18:50];3;9;Cartago;CE1104;;Ingeniería en Computadores
+CE2103;Algoritmos y estructuras de datos II;2;Semipresencial;Hernandez Vasquez Marco;MAR[17:00-18:50], JUE[17:00-18:50];4;12;Cartago;CE1103,CE1105;;Ingeniería en Computadores
+CE2103;Algoritmos y estructuras de datos II;1;Semipresencial;Ramirez Herrera Jose Isaac;MIE[19:00-20:50], VIE[19:00-20:50];4;12;Cartago;CE1103,CE1105;;Ingeniería en Computadores
+CE2103;Algoritmos y estructuras de datos II;1;Semipresencial;Ramirez Herrera Jose Isaac;MAR[07:30-09:20], JUE[07:30-09:20];4;12;Cartago;CE1103,CE1105;;Ingeniería en Computadores
+MA0101;Matemática General;30;Semipresencial;Reiman Acuña Chacón;Mié 18:00–20:50 / Vie 18:00–19:50;2;5;Cartago;;;Ingeniería en Computadores
+MA0101;Matemática General;21;Regular;Andy Alvarado Solano;Mié 07:30–10:20 / Vie 07:30–09:20;2;5;Cartago;;;Ingeniería en Computadores
+MA0101;Matemática General;28;Grupo RN;Roberto Azofeifa Cubero;Mié 16:00–18:50 / Vie 16:00–17:50;2;5;Cartago;;;Ingeniería en Computadores
+MA0101;Matemática General;18;Regular;Erick Chacón Vargas;Mar 17:00–19:50 / Jue 17:00–18:50;2;5;Cartago;;;Ingeniería en Computadores
+MA0101;Matemática General;4;Regular;Marcial Cordero Quirós;Mar 09:30–11:20 / Jue 09:30–12:20;2;5;Cartago;;;Ingeniería en Computadores
+MA1102;Cálculo Diferencial e Integral;11;Regular;Roberto Azofeifa Cubero;Mié 07:30–10:20 / Vie 07:30–09:20;4;5;Cartago;MA0101;;Ingeniería en Computadores
+MA1102;Cálculo Diferencial e Integral;4;Asistida;Manuel Calderón Solano;Mar 09:30–12:20 / Jue 10:30–12:20;4;5;Cartago;MA0101;;Ingeniería en Computadores
+MA1102;Cálculo Diferencial e Integral;13;Regular;Manuel Calderón Solano;Mié 13:00–15:50 / Vie 13:00–14:50;4;5;Cartago;MA0101;;Ingeniería en Computadores
+MA1102;Cálculo Diferencial e Integral;16;Semipresencial;Juan José Fallas Monge;Mié 16:00–18:50 / Vie 16:00–17:50;4;5;Cartago;MA0101;;Ingeniería en Computadores
+MA1102;Cálculo Diferencial e Integral;2;Grupo RN;Jorge Jiménez Madrigal;Mar 07:30–09:20 / Jue 07:30–10:20;4;5;Cartago;MA0101;;Ingeniería en Computadores
+MA1103;Cálculo y Álgebra Lineal;5;Regular;Jorge Luis Chinchilla Valverde;Mar 15:00–16:50 / Jue 15:00–16:50;4;4;Cartago;MA1102;;Ingeniería en Computadores
+MA1103;Cálculo y Álgebra Lineal;4;Regular;Geovanni Figueroa Mata;Mar 13:00–14:50 / Jue 13:00–14:50;4;4;Cartago;MA1102;;Ingeniería en Computadores
+MA1103;Cálculo y Álgebra Lineal;8;Regular;Geovanni Figueroa Mata;Mié 13:00–14:50 / Vie 13:00–14:50;4;4;Cartago;MA1102;;Ingeniería en Computadores
+MA1103;Cálculo y Álgebra Lineal;15;Regular;Geovanni Figueroa Mata;Mar 18:00–19:50 / Jue 18:00–19:50;4;4;Cartago;MA1102;;Ingeniería en Computadores
+MA1103;Cálculo y Álgebra Lineal;3;Regular;Marco Vinicio Gutiérrez Montenegro;Mar 09:30–11:20 / Jue 09:30–11:20;4;4;Cartago;MA1102;;Ingeniería en Computadores
+MA1403;Matemática Discreta;10;Regular;Jeison Esquivel Samudio;Mié 18:00–19:50 / Vie 18:00–19:50;4;4;Cartago;;;Ingeniería en Computadores
+MA1403;Matemática Discreta;3;Regular;Juan José Fallas Monge;Mar 13:00–14:50 / Jue 13:00–14:50;4;4;Cartago;;;Ingeniería en Computadores
+MA1403;Matemática Discreta;6;Regular;Juan José Fallas Monge;Mié 07:30–09:20 / Vie 07:30–09:20;4;4;Cartago;;;Ingeniería en Computadores
+MA1403;Matemática Discreta;5;Semipresencial;Grettel Gutiérrez Ruiz;Mar 18:00–19:50 / Jue 18:00–19:50;4;4;Cartago;;;Ingeniería en Computadores
+MA1403;Matemática Discreta;4;Regular;Greivin Ramírez Arce;Mar 16:00–17:50 / Jue 16:00–17:50;4;4;Cartago;;;Ingeniería en Computadores
+MA2104;Cálculo Superior;2;Semipresencial;Alexander Borbón Alpízar;Mar 18:00–19:50 / Jue 18:00–19:50;4;4;Cartago;MA1103;;Ingeniería en Computadores
+MA2104;Cálculo Superior;7;Regular;Erick Chacón Vargas;Mar 13:00–14:50 / Jue 13:00–14:50;4;4;Cartago;MA1103;;Ingeniería en Computadores
+MA2104;Cálculo Superior;6;Regular;Jeison Esquivel Samudio;Sáb 07:30–11:20;4;4;Cartago;MA1103;;Ingeniería en Computadores
+MA2104;Cálculo Superior;5;Semipresencial;Arturo Vega Vasquez;Sáb 07:30–11:20;4;4;Cartago;MA1103;;Ingeniería en Computadores
+MA2104;Cálculo Superior;4;Regular;Alejandra Jiménez Romero;Mar 09:30–11:20 / Jue 09:30–11:20;4;4;Cartago;MA1103;;Ingeniería en Computadores
+FI1101;Física general I;8;Regular;Corrales Quesada Esteban;Mar 15:00–16:50 / Jue 15:00–16:50;3;4;Cartago;MA1102;;Ingeniería en Computadores
+FI1101;Física general I;9;Regular;Corrales Quesada Esteban;Mar 17:00–18:50 / Jue 17:00–18:50;3;4;Cartago;MA1102;;Ingeniería en Computadores
+FI1101;Física general I;10;Semipresencial;Elizondo Zúñiga Jennifer;Mié 09:30–11:20 / Vie 09:30–11:20;3;4;Cartago;MA1102;;Ingeniería en Computadores
+FI1101;Física general I;4;Regular;Elizondo Zúñiga Jennifer;Mar 09:30–11:20 / Jue 09:30–11:20;3;4;Cartago;MA1102;;Ingeniería en Computadores
+FI1102;Física general II;1;Regular;Lobo Zamora Juan Carlos;Mar 07:30–09:20 / Jue 07:30–09:20;3;4;Cartago;FI1101;MA1102;Ingeniería en Computadores
+FI1102;Física general II;7;Regular;Murillo Zumbado Gustavo;Mié 09:30–11:20 / Vie 09:30–11:20;3;4;Cartago;FI1101;MA1102;Ingeniería en Computadores
+FI1102;Física general II;6;Regular;Murillo Zumbado Gustavo;Mié 07:30–09:20 / Vie 07:30–09:20;3;4;Cartago;FI1101;MA1102;Ingeniería en Computadores
+FI1102;Física general II;11;Regular;Murillo Zumbado Gustavo;Mar 09:30–11:20 / Jue 09:30–11:20;3;4;Cartago;FI1101;MA1102;Ingeniería en Computadores
+FI1102;Física general II;5;Semipresencial;Oreamuno Madriz Rafael;Mar 15:00–16:50 / Jue 15:00–16:50;3;4;Cartago;FI1101;MA1102;Ingeniería en Computadores
+FI1201;Laboratorio física general I;11;Regular;Alfaro Alvarado José Abrahán;Jue 07:30–09:20;1;2;Cartago;;FI1101;Ingeniería en Computadores
+FI1201;Laboratorio física general I;27;Regular;Alfaro Alvarado José Abrahán;Jue 17:00–18:50;1;2;Cartago;;FI1101;Ingeniería en Computadores
+FI1201;Laboratorio física general I;23;Regular;Cambronero Cordero Michael;Mié 15:00–16:50;1;2;Cartago;;FI1101;Ingeniería en Computadores
+FI1201;Laboratorio física general I;24;Regular;Cambronero Cordero Michael;Mié 17:00–18:50;1;2;Cartago;;FI1101;Ingeniería en Computadores
+FI1201;Laboratorio física general I;3;Regular;Campos Rodríguez Melania;Mar 13:00–14:50;1;2;Cartago;;FI1101;Ingeniería en Computadores
+FI1202;Laboratorio física general II;7;Regular;Araya Solano Luis Alonso;Mié 17:00–18:50;1;2;Cartago;FI1201;FI1102;Ingeniería en Computadores
+FI1202;Laboratorio física general II;1;Regular;Araya Solano Luis Alonso;Mar 09:30–11:20;1;2;Cartago;FI1201;FI1102;Ingeniería en Computadores
+FI1202;Laboratorio física general II;2;Regular;Araya Solano Luis Alonso;Mar 13:00–14:50;1;2;Cartago;FI1201;FI1102;Ingeniería en Computadores
+FI1202;Laboratorio física general II;2;Regular;Campos Rodríguez Melania;Mar 13:00–14:50;1;2;Cartago;FI1201;FI1102;Ingeniería en Computadores
+FI1202;Laboratorio física general II;3;Regular;Campos Rodríguez Melania;Mar 17:00–18:50;1;2;Cartago;FI1201;FI1102;Ingeniería en Computadores
+QU1102;Laboratorio de química básica I;2;Regular;Abarca Guerrero Lilliana;Mar 07:30–09:20;1;2;Cartago;;QU1106;Ingeniería en Computadores
+QU1102;Laboratorio de química básica I;11;Regular;Abarca Guerrero Lilliana;Mar 15:00–16:50;1;2;Cartago;;QU1106;Ingeniería en Computadores
+QU1102;Laboratorio de química básica I;1;Regular;Araya Carvajal Fabio;Mar 07:30–09:20;1;2;Cartago;;QU1106;Ingeniería en Computadores
+QU1102;Laboratorio de química básica I;9;Regular;Araya Carvajal Fabio;Mar 13:00–14:50;1;2;Cartago;;QU1106;Ingeniería en Computadores
+QU1102;Laboratorio de química básica I;6;Regular;Arce Rojas Heilen;Mar 09:30–11:20;1;2;Cartago;;QU1106;Ingeniería en Computadores
+QU1106;Química Básica I;4;Semipresencial;Vargas Camareno Maricruz;Mar 09:30–11:20 / Jue 09:30–11:20;3;4;Cartago;;QU1102;Ingeniería en Computadores
+QU1106;Química Básica I;7;Semipresencial;Vargas Camareno Maricruz;Mar 13:00–14:50 / Jue 13:00–14:50;3;4;Cartago;;QU1102;Ingeniería en Computadores
+QU1106;Química Básica I;9;Semipresencial;Vargas Camareno Maricruz;Mar 15:00–16:50 / Jue 15:00–16:50;3;4;Cartago;;QU1102;Ingeniería en Computadores
+QU1106;Química Básica I;19;Semipresencial;Villalta Romero Fabian;Mié 13:00–14:50 / Vie 13:00–14:50;3;4;Cartago;;QU1102;Ingeniería en Computadores
+QU1106;Química Básica I;11;Semipresencial;Villalta Romero Fabian;Mié 13:00–14:50 / Vie 13:00–14:50;3;4;Cartago;;QU1102;Ingeniería en Computadores
+CI1407;Habilidades de comunicación en Ingeniería;2;Virtual;Morales Garay Saray;Mar 17:00–19:50;2;6;Cartago;;;Ingeniería en Computadores
+CI1407;Habilidades de comunicación en Ingeniería;4;Virtual;Morales Garay Saray;Jue 13:00–15:50;2;6;Cartago;;;Ingeniería en Computadores
+CI1407;Habilidades de comunicación en Ingeniería;3;Regular;Morales Solano Paola Natalia;Lun 09:30–12:20;2;6;Cartago;;;Ingeniería en Computadores
+CI1407;Habilidades de comunicación en Ingeniería;1;Virtual;Morales Solano Paola Natalia;Mié 07:30–10:20;2;6;Cartago;;;Ingeniería en Computadores
+CI1407;Habilidades de comunicación en Ingeniería;3;Virtual;Morales Solano Paola Natalia;Jue 13:00–15:50;2;6;Cartago;;;Ingeniería en Computadores
+CS1502;Introducción a la técnica, ciencia y tecnología;5;Regular;Bojorge Murillo Alexander;Mié 09:30–11:20;1;2;Cartago;;;Ingeniería en Computadores
+CS1502;Introducción a la técnica, ciencia y tecnología;7;Regular;Bojorge Murillo Alexander;Lun 18:00–19:50;1;2;Cartago;;;Ingeniería en Computadores
+CS1502;Introducción a la técnica, ciencia y tecnología;11;Regular;Bojorge Murillo Alexander;Mié 15:00–16:50;1;2;Cartago;;;Ingeniería en Computadores
+CS1502;Introducción a la técnica, ciencia y tecnología;18;Regular;Bojorge Murillo Alexander;Mar 15:00–16:50;1;2;Cartago;;;Ingeniería en Computadores
+CS1502;Introducción a la técnica, ciencia y tecnología;2;Regular;Bojorge Murillo Alexander;Mié 09:30–11:20;1;2;Cartago;;;Ingeniería en Computadores
+CS2101;Ambiente humano;1;Virtual;Franceschi Sojo Kattia;Mié 09:30–12:20;2;6;Cartago;;;Ingeniería en Computadores
+CS2101;Ambiente humano;2;Virtual;Franceschi Sojo Kattia;Mié 13:00–15:50;2;6;Cartago;;;Ingeniería en Computadores
+CS2101;Ambiente humano;5;Virtual;Murillo Solís Javier;Jue 09:30–12:20;2;6;Cartago;;;Ingeniería en Computadores
+CS2101;Ambiente humano;4;Virtual;Ortiz Álvarez Jorge Isaac;Mié 15:00–17:50;2;6;Cartago;;;Ingeniería en Computadores
+CS2101;Ambiente humano;5;Virtual;Ortiz Álvarez Jorge Isaac;Mié 09:30–12:20;2;6;Cartago;;;Ingeniería en Computadores
+EL2113;Circuitos eléctricos en corriente continua;4;Regular;Hernández Rivera Miguel;Lun 07:30–09:20 / Mié 07:30–09:20;4;4;Cartago;FI1101,MA1102;;Ingeniería en Computadores
+EL2113;Circuitos eléctricos en corriente continua;4;Regular;Hernández Rivera Miguel;Lun 07:30–09:20 / Mié 07:30–09:20;4;4;Cartago;FI1101,MA1102;;Ingeniería en Computadores
+EL2113;Circuitos eléctricos en corriente continua;2;Regular;Pérez Rodríguez Javier;Mar 09:30–11:20 / Jue 09:30–11:20;4;4;Cartago;FI1101,MA1102;;Ingeniería en Computadores
+EL2113;Circuitos eléctricos en corriente continua;2;Regular;Pérez Rodríguez Javier;Mar 09:30–11:20 / Jue 09:30–11:20;4;4;Cartago;FI1101,MA1102;;Ingeniería en Computadores
+EL2113;Circuitos eléctricos en corriente continua;3;Semipresencial;Picado García Fabián Alberto;Lun 07:30–11:20;4;4;Cartago;FI1101,MA1102;;Ingeniería en Computadores
+SE1101;Artes dramáticas;2;Regular;Gómez Jiménez Andrea;Mar 17:00–18:50;0;2;Cartago;;;Ingeniería en Computadores
+SE1105;Artes musicales;5;Regular;Meza Solano Vinicio;Jue 15:00–16:50;0;2;Cartago;;;Ingeniería en Computadores
+SE1106;Apreciación literaria;1;Regular;Ramos Vargas Arnoldo;Mar 07:30–09:20;0;2;Cartago;;;Ingeniería en Computadores
+SE1107;Apreciación de cine;2;Regular;Díaz Brenes Nelson;Vie 13:00–14:50;0;2;Cartago;;;Ingeniería en Computadores
+SE1109;Dinámica de la cultura;1;Virtual;Sancho Martínez Laura Karina;Lun 07:30–09:20;0;2;Cartago;;;Ingeniería en Computadores
+SE1201;Atletismo;2;Virtual;Loria Solano Johnny;Mar 07:30–09:20;0;2;Cartago;;;Ingeniería en Computadores
+SE1204;Natación;3;Regular;Sánchez Pérez Lisbeth;Mié 13:00–14:50;0;2;Cartago;;;Ingeniería en Computadores
+SE1205;Juegos y deportes en conjunto;8;Regular;Cabrera Araya Gustavo Alcides;Mié 09:30–11:20;0;2;Cartago;;;Ingeniería en Computadores
+SE1206;Acondicionamiento físico;3;Regular;Loria Solano Johnny;Mar 09:30–11:20;0;2;Cartago;;;Ingeniería en Computadores
+SE1209;Béisbol-softbol;1;Regular;Méndez Solano Miguel;Lun 07:30–09:20;0;2;Cartago;;;Ingeniería en Computadores
+FH0246;La música nos define: visión desde la etnomusicología;1;Virtual;Monge Pérez Luis Diego;Mié 18:00–20:50;0;2;Cartago;;;Ingeniería en Computadores
+FH0251;El universo de Star Wars: entre la ciencia ficción, la política y la mitología;1;Virtual;Vallecillo Alfaro Johanny;Mar 18:00–20:50;0;2;Cartago;;;Ingeniería en Computadores
+FH0035;Globalización y humanismo;1;Virtual;Rodríguez Morales Oscar;Mar 17:00–19:50;0;2;Cartago;;;Ingeniería en Computadores
+FH0047;Educación en nuestros tiempos;1;Virtual;Rivera Rojas Fanni;Mié 17:00–19:50;0;2;Cartago;;;Ingeniería en Computadores
+FH0147;Sexo y género, en la vida y el amor;1;Regular;Artavia Granados Xinia;Sáb 07:30–12:20;0;2;Cartago;;;Ingeniería en Computadores
+EM1401;Introducción a la pedagogía;1;Regular;Grettel Gutierrez Ruiz;MIE[09:30-11:20],VIE[09:30-11:20];3;4;Cartago;;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM1401;Introducción a la pedagogía;2;Regular;Maria Fernanda Mora Casasola;MIE[09:30-11:20],VIE[09:30-11:20];3;4;Cartago;;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM1404;Teorías psicopedagógicas del aprendizaje;1;Regular;Alejandra Alfaro Barquero;MAR[15:00-16:50],JUE[15:00-16:50];3;4;Cartago;;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM1600;Tecnologías digitales aplicadas a la matemática educativa I;1;Regular;Edward Parra Salazar;MIE[13:00-14:50],VIE[13:00-14:50];3;4;Cartago;;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM1605;Fundamentos de matemática I;1;Regular;Jorge Monge Fallas;MAR[09:30-11:20],MIE[07:30-09:20],JUE[09:30-11:20];4;12;Cartago;;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM1606;Fundamentos de matemática II;1;Regular;Jorge Monge Fallas;MAR[09:30-11:20],MIE[07:30-09:20],VIE[07:30-09:20];4;12;Cartago;EM1605;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM1607;Didáctica de la geometría;1;Regular;Carlos Monge Madriz;MIE[13:00-14:50],VIE[13:00-14:50];3;4;Cartago;EM1608,EM2606;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM1608;Didáctica del álgebra y funciones;1;Regular;Zuleyka Suarez Valdes-Ayala;MAR[07:30-09:20],JUE[07:30-09:20];3;4;Cartago;EM1606,EM2408;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM2408;Aprendizaje y didáctica de la matemática;1;Regular;Sigurd Ramos Marin;MAR[16:00-18:50];2;6;Cartago;EM1401;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM2603;Cálculo y análisis I;1;Regular;Andy Alvarado Solano;MAR[09:30-11:20],JUE[09:30-11:20];5;4;Cartago;EM3607;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM2604;Geometría I;1;Regular;Randall Blanco Benamburg;MAR[13:00-14:50],JUE[13:00-14:50];4;4;Cartago;MA1403;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM2606;Geometría II;1;Regular;Randall Blanco Benamburg;MIE[13:00-14:50],VIE[13:00-14:50];4;4;Cartago;EM2604;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM2608;Elementos de análisis de datos y probabilidad;1;Regular;Guillermo Ramirez Montes;MAR[13:00-14:50],JUE[13:00-14:50];3;4;Cartago;EM1606;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM3048;Atención a la diversidad en la enseñanza y el aprendizaje de la matemática;1;Regular;Marcela Marrero Calvo;MIE[07:30-09:20],VIE[07:30-09:20];3;9;Cartago;EM3407;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM3407;Psicología del desarrollo;1;Regular;Katherine Palma Picado;MIE[13:00-15:50];3;3;Cartago;EM1404;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM3607;Álgebra lineal;1;Regular;Juan Pablo Soto Quiros;MAR[13:00-14:50],JUE[13:00-14:50];5;4;Cartago;EM1606;EM1608;Enseñanza de la Matemática con Entornos Tecnológicos
+EM1609;Didáctica de la probabilidad y la estadística;1;Regular;Greivin Ramirez Arce;MAR[07:30-09:20],JUE[07:30-09:20];3;4;Cartago;;;Enseñanza de la Matemática con Entornos Tecnológicos
+MA1403;Matemática Discreta;1;Regular;Juan Jose Fallas Monge;MAR[13:00-14:50];4;4;Cartago;;;Ingeniería en Computadores
+CI1230;Inglés I;1;Virtual;Sonia Albertazzi Osorio;LUN[07:30-10:20];2;6;Cartago;CI0200,CI0202;;Enseñanza de la Matemática con Entornos Tecnológicos
+CI1230;Inglés I;7;Virtual;Sonia Albertazzi Osorio;MIE[09:30-12:20];2;6;Cartago;CI0200,CI0202;;Enseñanza de la Matemática con Entornos Tecnológicos
+CI1230;Inglés I;2;Regular;Sonia Albertazzi Osorio;MAR[07:30-10:20];2;6;Cartago;CI0200,CI0202;;Enseñanza de la Matemática con Entornos Tecnológicos
+CI1230;Inglés I;9;Regular;Sonia Albertazzi Osorio;JUE[13:00-15:50];2;6;Cartago;CI0200,CI0202;;Enseñanza de la Matemática con Entornos Tecnológicos
+CI1230;Inglés I;8;Regular;Carlos Andres Gomez Montoya;MIE[18:00-20:50],JUE[18:00-20:50];2;6;Cartago;CI0200,CI0202;;Enseñanza de la Matemática con Entornos Tecnológicos
+CI1231;Inglés II;10;Virtual;Esteban Fuentes Mora;MIE[16:00-18:50];2;3;Cartago;CI1230;;Enseñanza de la Matemática con Entornos Tecnológicos
+CI1231;Inglés II;11;Regular;Esteban Fuentes Mora;MIE[13:00-15:50];2;3;Cartago;CI1230;;Enseñanza de la Matemática con Entornos Tecnológicos
+CI1231;Inglés II;5;Virtual;Carlos Andres Gomez Montoya;MIE[18:00-20:50];2;3;Cartago;CI1230;;Enseñanza de la Matemática con Entornos Tecnológicos
+CI1231;Inglés II;11;Virtual;Carlos Andres Gomez Montoya;JUE[17:00-19:50];2;3;Cartago;CI1230;;Enseñanza de la Matemática con Entornos Tecnológicos
+CI1231;Inglés II;5;Regular;Carlos Andres Gomez Montoya;MAR[18:00-20:50];2;3;Cartago;CI1230;;Enseñanza de la Matemática con Entornos Tecnológicos
+CI1405;Fundamentos de comunicación académica;1;Virtual;Gabriela Amador Solano;MAR[07:30-09:20],JUE[07:30-09:20];3;9;Cartago;;;Enseñanza de la Matemática con Entornos Tecnológicos
+CI1405;Fundamentos de comunicación académica;2;Virtual;Saray Morales Garay;MAR[07:30-09:20],JUE[07:30-09:20];3;9;Cartago;;;Enseñanza de la Matemática con Entornos Tecnológicos
+CI1406;Argumentación e investigación en comunicación académica;1;Regular;Paola Natalia Morales Solano;MAR[07:30-09:20],JUE[07:30-09:20];3;9;Cartago;CI1405;;Enseñanza de la Matemática con Entornos Tecnológicos
+CA2125;Elementos de computación;9;Semipresencial;Rodrigo Bogarin Navarro;MAR[19:00-20:50],JUE[19:00-20:50];3;4;Cartago;;;Enseñanza de la Matemática con Entornos Tecnológicos
+CA2125;Elementos de computación;9;Semipresencial;Ivan Campos Fernandez;MIE[17:00-18:50],VIE[17:00-18:50];3;4;Cartago;;;Enseñanza de la Matemática con Entornos Tecnológicos
+CA2125;Elementos de computación;10;Semipresencial;Ivan Campos Fernandez;MAR[19:00-20:50],JUE[19:00-20:50];3;4;Cartago;;;Enseñanza de la Matemática con Entornos Tecnológicos
+CA2125;Elementos de computación;5;Semipresencial;Ivan Campos Fernandez;MAR[17:00-18:50],JUE[17:00-18:50];3;4;Cartago;;;Enseñanza de la Matemática con Entornos Tecnológicos
+CA2125;Elementos de computación;6;Semipresencial;Ivan Campos Fernandez;MAR[19:00-20:50],JUE[19:00-20:50];3;4;Cartago;;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM1609;Didáctica de la probabilidad y la estadística;1;Regular;Ramirez Arce Greivin;MAR[07:30-09:20], JUE[07:30-09:20];3;4;CAMPUS TECNOLOGICO CENTRAL CARTAGO;EM1607,EM2608;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM1610;Tecnologías digitales aplicadas a la matemática educativa II;1;Regular;Parra Salazar Edward;MAR[09:30-11:20], JUE[09:30-11:20];3;4;CAMPUS TECNOLOGICO CENTRAL CARTAGO;CA2125,EM1600;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM2607;Cálculo y análisis II;1;Regular;Rosales Ortega Jose;MIE[16:00-18:50], VIE[16:00-17:50];5;5;CAMPUS TECNOLOGICO CENTRAL CARTAGO;EM2603;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM3408;Evaluación del aprendizaje;1;Regular;Ramos Marin Sigurd;MIE[07:30-09:20], VIE[07:30-09:20];3;4;CAMPUS TECNOLOGICO CENTRAL CARTAGO;EM3048;EM1609;Enseñanza de la Matemática con Entornos Tecnológicos
+EM3409;Práctica docente;1;Regular;Gutierrez Ruiz Grettel;JUE[15:00-17:50];6;9;CAMPUS TECNOLOGICO CENTRAL CARTAGO;;;Enseñanza de la Matemática con Entornos Tecnológicos
+EM3608;Cálculo y análisis III;1;Regular;Rosales Ortega Jose;MIE[16:00-18:50], VIE[16:00-17:50];5;5;CAMPUS TECNOLOGICO CENTRAL CARTAGO;EM2607;;Enseñanza de la Matemática con Entornos Tecnológicos
+CS3401;Seminario de estudios filosóficos históricos;2;Virtual;Leon Rodriguez Maria Elena;MAR[09:30-12:20];2;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;;;Enseñanza de la Matemática con Entornos Tecnológicos
+CS3401;Seminario de estudios filosóficos históricos;5;Semipresencial;Leon Rodriguez Maria Elena;JUE[09:30-12:20];2;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;;;Enseñanza de la Matemática con Entornos Tecnológicos
+CS3401;Seminario de estudios filosóficos históricos;6;Semipresencial;Leon Rodriguez Maria Elena;JUE[13:00-15:50];2;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;;;Enseñanza de la Matemática con Entornos Tecnológicos
+CS3401;Seminario de estudios filosóficos históricos;7;Semipresencial;Leon Rodriguez Maria Elena;JUE[13:00-15:50];2;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;;;Enseñanza de la Matemática con Entornos Tecnológicos
+CS3401;Seminario de estudios filosóficos históricos;3;Semipresencial;Leon Rodriguez Maria Elena;JUE[09:30-12:20];2;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;;;Enseñanza de la Matemática con Entornos Tecnológicos
+CS3401;Seminario de estudios filosóficos históricos;5;Semipresencial;Leon Rodriguez Maria Elena;LUN[09:30-12:20];2;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;;;Enseñanza de la Matemática con Entornos Tecnológicos
+CE1106;Paradigmas de programación;1;Semipresencial;Barboza Artavia Luis;MIE[09:30-11:20], VIE[09:30-11:20];3;9;CAMPUS TECNOLOGICO CENTRAL CARTAGO;CE2103;;Ingeniería en Computadores
+CE1106;Paradigmas de programación;2;Semipresencial;Gamboa Ramirez Santiago;MAR[17:00-18:50], JUE[17:00-18:50];3;9;CAMPUS TECNOLOGICO CENTRAL CARTAGO;CE2103;;Ingeniería en Computadores
+CE1106;Paradigmas de programación;1;Semipresencial;Rivera Meneses Marco;MAR[17:00-18:50], JUE[17:00-18:50];3;9;CAMPUS TECNOLOGICO CENTRAL CARTAGO;CE2103;;Ingeniería en Computadores
+CE1107;Fundamentos de arquitectura de computadores;1;Semipresencial;Chavarria Zamora Luis;MAR[13:00-14:50], JUE[13:00-14:50];4;12;CAMPUS TECNOLOGICO CENTRAL CARTAGO;EL2207;;Ingeniería en Computadores
+CE1107;Fundamentos de arquitectura de computadores;1;Semipresencial;Chavarria Zamora Luis;MAR[09:30-11:20], JUE[09:30-11:20];4;12;CAMPUS TECNOLOGICO CENTRAL CARTAGO;EL2207;;Ingeniería en Computadores
+CE2201;Laboratorio de circuitos eléctricos;2;Regular;Araya Martinez Leonardo;LUN[07:30-09:20];1;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;FI1202;;Ingeniería en Computadores
+CE2201;Laboratorio de circuitos eléctricos;1;Regular;Araya Rodriguez Lisandro;LUN[09:30-11:20];1;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;FI1202;;Ingeniería en Computadores
+CE2201;Laboratorio de circuitos eléctricos;2;Regular;Barboza Artavia Luis;LUN[07:30-09:20];1;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;FI1202;;Ingeniería en Computadores
+CE3101;Bases de datos;2;Semipresencial;Hernandez Vasquez Marco;MIE[19:00-20:50], VIE[19:00-20:50];4;12;CAMPUS TECNOLOGICO CENTRAL CARTAGO;CE1106;;Ingeniería en Computadores
+CE3101;Bases de datos;1;Semipresencial;Rivera Meneses Marco;MIE[19:00-20:50], VIE[19:00-20:50];4;12;CAMPUS TECNOLOGICO CENTRAL CARTAGO;CE1106;;Ingeniería en Computadores
+CE3201;Taller de diseño digital;1;Semipresencial;Barboza Artavia Luis;MIE[09:30-11:20], VIE[09:30-11:20];2;6;CAMPUS TECNOLOGICO CENTRAL CARTAGO;CE2201;CE1107;Ingeniería en Computadores
+CE3201;Taller de diseño digital;1;Semipresencial;Calderon Prado Kimberly;JUE[13:00-14:50], SAB[08:30-10:20];2;6;CAMPUS TECNOLOGICO CENTRAL CARTAGO;CE2201;CE1107;Ingeniería en Computadores
+CE3201;Taller de diseño digital;2;Semipresencial;Gonzalez Gomez Jeferson;MAR[09:30-11:20], JUE[09:30-11:20];2;6;CAMPUS TECNOLOGICO CENTRAL CARTAGO;CE2201;CE1107;Ingeniería en Computadores
+EL2114;Circuitos eléctricos en corriente alterna;1;Semipresencial;Cabrera Quiros Laura Cristina;MIE[09:30-11:20], VIE[09:30-11:20];4;4;CAMPUS TECNOLOGICO CENTRAL CARTAGO;EL2113;EL2207;Ingeniería en Computadores
+EL2114;Circuitos eléctricos en corriente alterna;1;Regular;Chinchilla Vargas Erick Gustavo;MIE[17:00-18:50], VIE[17:00-18:50];4;4;CAMPUS TECNOLOGICO CENTRAL CARTAGO;EL2113;EL2207;Ingeniería en Computadores
+EL2114;Circuitos eléctricos en corriente alterna;2;Semipresencial;Quiros Solano William;MAR[09:30-11:20], JUE[09:30-11:20];4;4;CAMPUS TECNOLOGICO CENTRAL CARTAGO;EL2113;EL2207;Ingeniería en Computadores
+EL2114;Circuitos eléctricos en corriente alterna;3;Regular;Valverde Gardela Heberth;MIE[07:30-09:20], VIE[07:30-09:20];4;4;CAMPUS TECNOLOGICO CENTRAL CARTAGO;EL2113;EL2207;Ingeniería en Computadores
+EL2207;Elementos activos;2;Semipresencial;Montero Rodriguez Juan Jose;MAR[07:30-09:20], JUE[07:30-09:20];4;4;CAMPUS TECNOLOGICO CENTRAL CARTAGO;EL2113;;Ingeniería en Computadores
+EL2207;Elementos activos;1;Regular;Segura Quiros Carlos;MAR[15:00-16:50], JUE[15:00-16:50];4;4;CAMPUS TECNOLOGICO CENTRAL CARTAGO;EL2113;;Ingeniería en Computadores
+EL2207;Elementos activos;1;Regular;Segura Quiros Carlos;MAR[15:00-16:50], JUE[15:00-16:50];4;4;CAMPUS TECNOLOGICO CENTRAL CARTAGO;EL2113;;Ingeniería en Computadores
+PI2609;Probabilidad y estadística;3;Regular;Daniels Chan Esteban;JUE[17:00-19:50];2;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;MA2104;;Ingeniería en Computadores
+PI2609;Probabilidad y estadística;2;Regular;Hasbum Fernandez Ivannia;JUE[13:00-15:50];2;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;MA2104;;Ingeniería en Computadores
+PI2609;Probabilidad y estadística;2;Regular;Hasbum Fernandez Ivannia;MIE[13:00-15:50];2;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;MA2104;;Ingeniería en Computadores
+PI2609;Probabilidad y estadística;3;Regular;Hasbum Fernandez Ivannia;JUE[13:00-15:50];2;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;MA2104;;Ingeniería en Computadores
+PI5516;Ingeniería económica;1;Virtual;Chacon Rojas Fernando;MAR[17:00-20:50];3;4;CAMPUS TECNOLOGICO CENTRAL CARTAGO;PI2609;;Ingeniería en Computadores
+PI5516;Ingeniería económica;1;Regular;Chacon Rojas Fernando;MAR[17:00-20:50];3;4;CAMPUS TECNOLOGICO CENTRAL CARTAGO;PI2609;;Ingeniería en Computadores
+PI5516;Ingeniería económica;2;Virtual;Farah Guzman Biljhana Shakira;VIE[17:00-20:50];3;4;CAMPUS TECNOLOGICO CENTRAL CARTAGO;PI2609;;Ingeniería en Computadores
+PI5516;Ingeniería económica;2;Virtual;Farah Guzman Biljhana Shakira;VIE[17:00-20:50];3;4;CAMPUS TECNOLOGICO CENTRAL CARTAGO;PI2609;;Ingeniería en Computadores
+MA2105;Ecuaciones diferenciales;1;Regular;Alpizar Brenes Geisel;MAR[07:30-09:20], JUE[07:30-09:20];4;4;CAMPUS TECNOLOGICO CENTRAL CARTAGO;MA1103;;Ingeniería en Computadores
+MA2105;Ecuaciones diferenciales;1;Regular;Rodriguez Bustos Kendall;MAR[09:30-11:20], JUE[09:30-11:20];4;4;CAMPUS TECNOLOGICO CENTRAL CARTAGO;MA1103;;Ingeniería en Computadores
+SO4604;Seguridad y salud ocupacional;2;Regular;Carpio Chaves Monica;JUE[13:00-15:50];3;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;FI1102;;Ingeniería en Computadores
+SO4604;Seguridad y salud ocupacional;2;Regular;Carpio Chaves Monica;JUE[13:00-15:50];3;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;FI1102;;Ingeniería en Computadores
+SO4604;Seguridad y salud ocupacional;1;Regular;Morales Martinez Gabriela;LUN[07:30-10:20];3;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;FI1102;;Ingeniería en Computadores
+SO4604;Seguridad y salud ocupacional;1;Regular;Morales Martinez Gabriela;LUN[07:30-10:20];3;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;FI1102;;Ingeniería en Computadores
+SO4604;Seguridad y salud ocupacional;3;Regular;Morales Martinez Gabriela;JUE[17:00-19:50];3;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;FI1102;;Ingeniería en Computadores
+SO4604;Seguridad y salud ocupacional;3;Regular;Morales Martinez Gabriela;JUE[17:00-19:50];3;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;FI1102;;Ingeniería en Computadores
+SO4604;Seguridad y salud ocupacional;5;Regular;Morales Martinez Gabriela;MIE[13:00-15:50];3;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;FI1102;;Ingeniería en Computadores
+SO4604;Seguridad y salud ocupacional;5;Regular;Morales Martinez Gabriela;MIE[13:00-15:50];3;3;CAMPUS TECNOLOGICO CENTRAL CARTAGO;FI1102;;Ingeniería en Computadores
