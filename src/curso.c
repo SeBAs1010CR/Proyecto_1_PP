@@ -4,7 +4,7 @@
 #include "curso.h"
 
 #define MAX_CURSOS 70
-#define MAX_CAMPOS 11
+#define MAX_CAMPOS 12
 #define TAM_CAMPO 320
 #define TAM_LINEA 2048
 #define RUTA_CURSOS "data/cursos.csv"
@@ -125,6 +125,7 @@ void inicializarCurso(Curso *curso) {
     inicializarRequisitos(&curso->correquisitos);
     curso->cantidadGrupos = 0;
     curso->puedeMatricular = 0;
+    curso->carrera[0] = '\0';
 }
 
 /*
@@ -188,8 +189,9 @@ static int parsearCodigos(const char *texto, Requisitos *req) {
  */
 static const char *textoErrorLeerCurso(int codigo) {
     switch (codigo) {
-        case -1: return "Registro incompleto o con separador incorrecto (se esperaban 11 campos con ';').";
-        case -12: return "Registro con más de 11 campos.";
+        case -1: return "Registro incompleto o con separador incorrecto (se esperaban 12 campos con ';').";
+        case -12: return "Registro con más de 12 campos.";
+        case -14: return "Carrera vacía o demasiado larga.";
         case -13: return "Campo demasiado largo (excede el tamaño máximo permitido); no se trunca información.";
         case -2: return "Código de curso inválido (debe tener 2 letras mayúsculas y 4 números, p. ej. CE1101).";
         case -3: return "Nombre de curso vacío o demasiado largo.";
@@ -216,7 +218,7 @@ int leerCurso(const char *linea, Curso *curso) {
     char campos[MAX_CAMPOS][TAM_CAMPO];
     int n = dividirLinea(linea, campos);
 
-    if (n == -1) return -12;   /* más de 11 campos */
+    if (n == -1) return -12;   /* más de 12 campos */
     if (n == -2) return -13;   /* un campo excede el máximo, sin truncar */
     if (n < MAX_CAMPOS) return -1;
 
@@ -276,6 +278,13 @@ int leerCurso(const char *linea, Curso *curso) {
     if (!parsearCodigos(campos[10], &curso->correquisitos)) {
         return -11;
     }
+
+    /* carrera (columna 12, obligatoria) */
+    if (campos[11][0] == '\0') return -14;
+    if (longitudSegura(campos[11], MAX_CARRERA_LEN) >= MAX_CARRERA_LEN) {
+        return -14;
+    }
+    snprintf(curso->carrera, sizeof(curso->carrera), "%s", campos[11]);
 
     curso->cantidadGrupos = 1;
     return 0;

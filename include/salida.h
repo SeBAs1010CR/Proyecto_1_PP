@@ -13,13 +13,14 @@
  * Una línea por grupo de cada curso (no por curso).
  * 
  * Encabezado:
- * codigo;nombre;creditos;grupo;tipo;profesor;horarios;requisitos;correquisitos;choca;puede_matricular
+ * codigo;nombre;creditos;grupo;tipo;profesor;horarios;requisitos;correquisitos;choca;puede_matricular;carrera
  * 
  * Campos:
  * - horarios: bloques separados por '|' (ej.: "MIE 07:30-09:20|VIE 07:30-09:20")
  * - requisitos/correquisitos: códigos separados por coma (vacío si no hay)
  * - choca: 1 si el curso choca con al menos otro (tomado de arreglo paralelo)
  * - puede_matricular: 1 si cumple requisitos y correquisitos
+ * - carrera: carrera que aporta el curso (la consume Racket, etapa 2)
  */
 
 #include "curso.h"
