@@ -27,6 +27,7 @@
  * - grupos: Arreglo de grupos que imparten este curso.
  * - cantidadGrupos: Número de grupos cargados para este curso.
  * - puedeMatricular: Indicador de elegibilidad (1 = puede matricularse, 0 = no).
+ * - carrera: Carrera que aporta el curso (columna 12 de data/cursos.csv).
  */
 typedef struct {
     char codigo[MAX_CODIGO_LEN];
@@ -38,6 +39,7 @@ typedef struct {
     Grupo grupos[MAX_GRUPOS_POR_CURSO];
     int cantidadGrupos;
     int puedeMatricular; /* 1 si el estudiante puede matricularlo, 0 si no */
+    char carrera[MAX_CARRERA_LEN]; /* carrera que aporta el curso */
 } Curso;
 
 /* Inicializa un curso en estado vacío.
@@ -51,8 +53,9 @@ void inicializarCurso(Curso *curso);
  * 
  * Recibe: línea de texto del archivo CSV y puntero a Curso de salida.
  * Devuelve: 0 si fue exitoso, o un código negativo indicando el tipo de error:
- *   -1: registro incompleto (< 11 campos)
- *   -12: más de 11 campos
+ *   -1: registro incompleto (< 12 campos)
+ *   -12: más de 12 campos
+ *   -14: carrera vacía o demasiado larga
  *   -13: campo demasiado largo (sin truncar)
  *   -2: código inválido
  *   -3: nombre inválido
