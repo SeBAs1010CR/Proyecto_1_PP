@@ -80,14 +80,15 @@
            (a-entero (campo campos 10))
            (campo campos 11))))
 
-;; Lee el archivo completo y devuelve la lista de Grupo (sin el encabezado).
+;; Lee el archivo completo, descarta los no elegibles y devuelve la lista de Grupo (sin el encabezado).
 (define (leer-catalogo ruta)
   (let* ([contenido (file->string ruta)]
          [lineas (filter (lambda (l) (not (string=? (string-trim l) "")))
                          (regexp-split #rx"\r\n|\n|\r" contenido))])
     (if (null? lineas)
         '()
-        (map linea->grupo (cdr lineas)))))
+        (filter (lambda (g) (= (Grupo-puede-matricular g) 1))
+                (map linea->grupo (cdr lineas))))))
 
 ;; Agrupa los grupos por código: lista de (codigo . lista-de-Grupo).
 (define (agrupar-por-curso grupos)
