@@ -8,26 +8,28 @@
 
 :- consult('../src/recorrido.pl').
 
+% Los cursos siguen el contrato curso(Codigo, Grupo, Creditos, Area, Carrera).
+
 % c1 cumple: áreas dentro del límite, carreras balanceadas, sin incompatibles.
 recorrido:combinacion(c1,
-    [curso('CE1101', 'Introduccion a la programacion', 3, 'Programacion', 'Ingenieria en Computadores'),
-     curso('EM5001', 'Matematica para la ensenanza', 4, 'Matematica', 'Ensenanza de la Matematica')]).
+    [curso('CE1101', 3, 3, 'Programacion', 'Ingenieria en Computadores'),
+     curso('EM5001', 1, 4, 'Matematica', 'Ensenanza de la Matematica')]).
 
 % c2 viola incompatibilidad: CE1101 y CE1103 son un par incompatible.
 recorrido:combinacion(c2,
-    [curso('CE1101', 'Introduccion a la programacion', 3, 'Programacion', 'Ingenieria en Computadores'),
-     curso('CE1103', 'Estructuras de datos', 4, 'Programacion', 'Ingenieria en Computadores')]).
+    [curso('CE1101', 3, 3, 'Programacion', 'Ingenieria en Computadores'),
+     curso('CE1103', 2, 4, 'Programacion', 'Ingenieria en Computadores')]).
 
 % c3 viola límite por área: tres cursos de Programacion (máximo 2).
 recorrido:combinacion(c3,
-    [curso('CE1105', 'Programacion I', 3, 'Programacion', 'Ingenieria en Computadores'),
-     curso('CE2103', 'Programacion II', 3, 'Programacion', 'Ingenieria en Computadores'),
-     curso('EM5002', 'Algoritmos educativos', 4, 'Programacion', 'Ensenanza de la Matematica')]).
+    [curso('CE1105', 1, 3, 'Programacion', 'Ingenieria en Computadores'),
+     curso('CE2103', 1, 3, 'Programacion', 'Ingenieria en Computadores'),
+     curso('EM5002', 2, 4, 'Programacion', 'Ensenanza de la Matematica')]).
 
 % c4 viola balance: 100% de los créditos son de Ingenieria en Computadores (máximo 70%).
 recorrido:combinacion(c4,
-    [curso('CE1105', 'Programacion I', 4, 'Programacion', 'Ingenieria en Computadores'),
-     curso('MA1103', 'Calculo', 4, 'Matematica', 'Ingenieria en Computadores')]).
+    [curso('CE1105', 1, 4, 'Programacion', 'Ingenieria en Computadores'),
+     curso('MA1103', 2, 4, 'Matematica', 'Ingenieria en Computadores')]).
 
 :- begin_tests(recorrido).
 
