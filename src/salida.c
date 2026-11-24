@@ -15,7 +15,8 @@
 
 #define RUTA_SALIDA "output/catalogo_salida.csv"
 #define ENCABEZADO "codigo;nombre;creditos;grupo;tipo;profesor;horarios;" \
-                   "requisitos;correquisitos;choca;puede_matricular;carrera\n"
+                   "requisitos;correquisitos;choca;puede_matricular;carrera;" \
+                   "area\n"
 
 /*
  * escribirHorarios
@@ -93,8 +94,9 @@ int exportarCatalogo(const Curso *cursos, int cantidadCursos,
             escribirCodigos(archivo, &curso->requisitos);
             fputc(';', archivo);
             escribirCodigos(archivo, &curso->correquisitos);
-            fprintf(archivo, ";%d;%d;%s\n", choca,
-                    curso->puedeMatricular ? 1 : 0, curso->carrera);
+            fprintf(archivo, ";%d;%d;%s;%s\n", choca,
+                    curso->puedeMatricular ? 1 : 0, curso->carrera,
+                    curso->area);
             lineas++;
         }
     }

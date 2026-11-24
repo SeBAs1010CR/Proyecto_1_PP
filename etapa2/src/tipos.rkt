@@ -33,6 +33,7 @@
 ;;  choca              : 1 si el curso choca con otro del catálogo, 0 si no
 ;;  puede-matricular   : 1 si el estudiante cumple requisitos, 0 si no
 ;;  carrera            : carrera que aporta el curso
+;;  area               : área académica del curso (ej. "Computación")
 (struct/contract Grupo
   ([codigo string?]
    [nombre string?]
@@ -45,7 +46,8 @@
    [correquisitos (listof string?)]
    [choca (or/c 0 1)]
    [puede-matricular (or/c 0 1)]
-   [carrera string?])
+   [carrera string?]
+   [area string?])
   #:transparent)
 
 ;; Preferencias del estudiante.

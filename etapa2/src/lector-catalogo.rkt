@@ -6,7 +6,7 @@
 ;; Formato (separador ';', una línea por grupo, primera línea = encabezado):
 ;;
 ;;   codigo;nombre;creditos;grupo;tipo;profesor;horarios;requisitos;
-;;   correquisitos;choca;puede_matricular;carrera
+;;   correquisitos;choca;puede_matricular;carrera;area
 ;;
 ;; horarios: bloques separados por '|', ej. "MIE 07:30-09:20|VIE 07:30-09:20"
 ;; requisitos / correquisitos: códigos separados por ',' (vacío si no hay)
@@ -59,7 +59,7 @@
       ""))
 
 ;; Convierte una línea del CSV en un Grupo.
-(define NUMERO-CAMPOS 12)
+(define NUMERO-CAMPOS 13)
 
 (define (linea->grupo linea)
   (let ([campos (dividir linea #\;)])
@@ -78,7 +78,8 @@
            (dividir-o-vacio (campo campos 8) #\,)
            (a-entero (campo campos 9))
            (a-entero (campo campos 10))
-           (campo campos 11))))
+           (campo campos 11)
+           (campo campos 12))))
 
 ;; Lee el archivo completo, descarta los no elegibles y devuelve la lista de Grupo (sin el encabezado).
 (define (leer-catalogo ruta)

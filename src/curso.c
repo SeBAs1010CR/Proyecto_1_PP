@@ -126,6 +126,47 @@ void inicializarCurso(Curso *curso) {
     curso->cantidadGrupos = 0;
     curso->puedeMatricular = 0;
     curso->carrera[0] = '\0';
+    curso->area[0] = '\0';
+}
+
+/*
+ * Tabla de áreas académicas por prefijo de código (2 letras).
+ * Los prefijos que no aparezcan aquí caen en "Otras".
+ */
+static const struct {
+    const char *prefijo;
+    const char *area;
+} AREAS[] = {
+    {"CE", "Computación"},
+    {"CS", "Computación"},
+    {"EL", "Computación"},
+    {"CA", "Computación"},
+    {"MA", "Ciencias básicas"},
+    {"FI", "Ciencias básicas"},
+    {"QU", "Ciencias básicas"},
+    {"PI", "Ciencias básicas"},
+    {"EM", "Educación"},
+    {"CI", "Humanidades y artes"},
+    {"FH", "Humanidades y artes"},
+    {"SE", "Humanidades y artes"},
+    {"SO", "Humanidades y artes"},
+};
+
+/*
+ * Asigna al curso el área académica según los dos primeros caracteres de
+ * su código (ej.: "MA1102" -> "Ciencias básicas").
+ *
+ * Recibe: puntero al Curso con el código ya cargado.
+ * Devuelve: nada.
+ */
+static void asignarArea(Curso *curso) {
+    snprintf(curso->area, sizeof(curso->area), "%s", "Otras");
+    for (size_t i = 0; i < sizeof(AREAS) / sizeof(AREAS[0]); i++) {
+        if (strncmp(curso->codigo, AREAS[i].prefijo, 2) == 0) {
+            snprintf(curso->area, sizeof(curso->area), "%s", AREAS[i].area);
+            return;
+        }
+    }
 }
 
 /*
@@ -285,6 +326,9 @@ int leerCurso(const char *linea, Curso *curso) {
         return -14;
     }
     snprintf(curso->carrera, sizeof(curso->carrera), "%s", campos[11]);
+
+    /* area (derivada del código, no viene en data/cursos.csv) */
+    asignarArea(curso);
 
     curso->cantidadGrupos = 1;
     return 0;

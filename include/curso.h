@@ -40,6 +40,7 @@ typedef struct {
     int cantidadGrupos;
     int puedeMatricular; /* 1 si el estudiante puede matricularlo, 0 si no */
     char carrera[MAX_CARRERA_LEN]; /* carrera que aporta el curso */
+    char area[MAX_AREA_LEN]; /* área académica, derivada del prefijo del código */
 } Curso;
 
 /* Inicializa un curso en estado vacío.
